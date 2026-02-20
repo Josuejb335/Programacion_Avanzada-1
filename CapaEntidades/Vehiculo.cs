@@ -9,11 +9,12 @@ namespace CapaEntidades
 {
     public class Vehiculo
     {
-        private string IdVehiculo { get; set; }
+        // atributos
+        private int IdVehiculo { get; set; }
         private string Marca { get; set; }
         private string Modelo { get; set; }
         private int Anio { get; set; }
-        private int Precio { get; set; }
+        private decimal Precio { get; set; }
         private char Estado { get; set; }
         private CategoriaVehiculo Categoria
         {
@@ -21,5 +22,16 @@ namespace CapaEntidades
             set { Categoria = value; }
         }
 
+        //constructor
+       public Vehiculo(int id, string marca, string modelo, int anio, decimal precio, char estado, CategoriaVehiculo categoria)
+        {
+            this.IdVehiculo = id;
+            this.Marca = marca;
+            this.Modelo = modelo;
+            this.Anio = anio;
+            this.Precio = precio;
+            this.Estado = estado;
+            this.Categoria = categoria;
+        }
     }
 }

@@ -16,6 +16,5 @@ namespace CapaEntidades
             this.IdVendedor = id;
             this.FechaIngreso = ingreso;
         }
-
     }
 }

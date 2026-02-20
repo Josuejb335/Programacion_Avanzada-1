@@ -7,6 +7,7 @@ namespace CapaEntidades
 {
     public class VehiculoxSucursal
     {
-        private 
+        private Sucursal Sucursal
+  
     }
 }
