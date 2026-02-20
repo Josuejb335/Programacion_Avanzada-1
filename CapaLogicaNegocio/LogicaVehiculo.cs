@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace CapaLogicaNegocio
 {
-    internal class LogicaVehiculo
+    public class LogicaVehiculo
     {
+        
     }
 }

@@ -9,10 +9,11 @@ namespace CapaAccesoDatos
 {
     public class Almacenamiento
     {
-        // listas para almacenar los objetos de cada clase
-        private Vehiculo[] listaVehiculos = new Vehiculo[20];
-        private Vendedor[] listaVendedores = new Vendedor[20];
-        private Sucursal[] listaSucursales = new Sucursal[5];
-        private Cliente[] listaClientes = new Cliente[5];
+        // Arreglos para almacenar los objetos de cada clase
+        public static CategoriaVehiculo[] ArrayCategorias = new CategoriaVehiculo[20];
+        public static Vehiculo[] ArrayVehiculos = new Vehiculo[20];
+        public static Vendedor[] ArrayVendedores = new Vendedor[20];
+        public static Sucursal[] ArraySucursales = new Sucursal[5];
+        public static Cliente[] ArrayClientes = new Cliente[5];
     }
 }

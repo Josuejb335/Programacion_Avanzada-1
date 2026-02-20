@@ -219,6 +219,7 @@
             btnRegistrarVehiculo.TabIndex = 3;
             btnRegistrarVehiculo.Text = "Registrar Vehiculo";
             btnRegistrarVehiculo.UseVisualStyleBackColor = false;
+            btnRegistrarVehiculo.Click += btnRegistrarVehiculo_Click;
             // 
             // imgLogo
             // 

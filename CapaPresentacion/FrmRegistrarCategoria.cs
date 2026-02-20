@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaEntidades;
+using CapaLogicaNegocio;
 
 namespace CapaPresentacion
 {
     public partial class FrmRegistrarCategoria : Form
     {
+        //variable para impedir guardar datos sin previsualizar
+        bool datosPrevisualizados = false;
+        //objeto de logica de negocio para acceder al metodo de agregar categoria
+        LogicaCat gestorLogica = new LogicaCat();
+
         public FrmRegistrarCategoria()
         {
             InitializeComponent();
@@ -35,27 +42,95 @@ namespace CapaPresentacion
             txtDescripcion.Clear();
             //limpiar tabla de vista previa
             dataPreviewRegistro.Rows.Clear();
-
+            //volver a habilitar boton de preview y deshabilitar boton de guardar
+            btnPrevisual.Enabled = true;
+            btnGuardarCat.Enabled = false;
         }
 
-        // ----------- Validacion y Registro de Datos a la lista de objetos -----------
+        // ----------- Validacion y Registro de Datos al ArrayL de objetos -----------
 
         //boton de preview para mostrar los datos ingresados en la tabla de vista previa
         private void btnPrevisual_Click(object sender, EventArgs e)
         {
-            //se obtienen los datos
-            string idCategoria = txtIdCategoria.Text;
-            string nombreCategoria = txtNombreCat.Text;
-            string descripcion = txtDescripcion.Text;
+            try
+            {
+                //-validaciones-
+                if (string.IsNullOrWhiteSpace(txtIdCategoria.Text) || string.IsNullOrWhiteSpace(txtNombreCat.Text) || string.IsNullOrWhiteSpace(txtDescripcion.Text))
+                {
+                    MessageBox.Show("Por favor, complete todos los campos antes de previsualizar.",
+                    "Informacion Incompleta",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                    return;
+                }
+                else if(!txtIdCategoria.MaskFull) ///verificar que el campo de ID este completo con los 6 digitos requeridos
+                {
+                    error1.SetError(txtIdCategoria, "El ID Debe contener 6 digitos.");
+                    txtIdCategoria.Focus();
+                    txtIdCategoria.SelectAll();
+                    return;
+                }
+                else
+                {
+                    error1.SetError(txtIdCategoria, "");
+                }
 
-            //se agrega una nueva fila a la tabla de vista previa con los datos obtenidos
-            int n = dataPreviewRegistro.Rows.Add();
-            dataPreviewRegistro.Rows[n].Cells[0].Value = idCategoria;
-            dataPreviewRegistro.Rows[n].Cells[1].Value = nombreCategoria;
-            dataPreviewRegistro.Rows[n].Cells[2].Value = descripcion;
+                //obtener datos para tabla de preview y posteriormente guardar en el ArrayL de objetos
+                string idCategoria = txtIdCategoria.Text;
+                string nombreCategoria = txtNombreCat.Text;
+                string descripcion = txtDescripcion.Text;
+                
+                //se agrega una nueva fila a la tabla de vista previa con los datos obtenidos
+                int n = dataPreviewRegistro.Rows.Add();
+                dataPreviewRegistro.Rows[n].Cells[0].Value = idCategoria;
+                dataPreviewRegistro.Rows[n].Cells[1].Value = nombreCategoria;
+                dataPreviewRegistro.Rows[n].Cells[2].Value = descripcion;
+                //se habilita el boton de guardar y se bloquea el boton de preview para evitar duplicados
+                btnGuardarCat.Enabled = true;
+                btnPrevisual.Enabled = false;
+                //se marca que los datos han sido previsualizados para permitir su registro
+                datosPrevisualizados = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al previsualizar los datos: " + ex.Message);
+            }
+
         }
 
-
-
+        private void btnGuardarCat_Click(object sender, EventArgs e)
+        {
+            //Recorrer tabla para guardar los datos en el ArrayL de objetos
+            foreach (DataGridViewRow fila in dataPreviewRegistro.Rows)
+            {
+                if (fila.Cells[0].Value != null) //evitar linea en blanco al final de la tabla
+                {
+                    // crear objeto de tipo CategoriaVehiculo con los datos de cada fila y agregarlo al ArrayL de objetos
+                    CategoriaVehiculo cat = new CategoriaVehiculo();
+                    cat.IdCategoria = fila.Cells[0].Value.ToString();
+                    cat.NombreCategoria = fila.Cells[1].Value.ToString();
+                    cat.Descripcion = fila.Cells[2].Value.ToString();
+                    //llamar metodo para agregar categoria al ArrayL de objetos y mostrar mensaje de resultado
+                    string resultado = gestorLogica.AgregarCategoria(cat);
+                    if (resultado.Contains("Error"))
+                    {
+                        MessageBox.Show(resultado, "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break; //salir del bucle si hay un error
+                    }
+                }
+            }
+            MessageBox.Show("Proceso de guardado finalizado.", "Guardado Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataPreviewRegistro.Rows.Clear(); //limpiar tabla de vista previa despues de guardar
+            
+            //limpiar los campos de texto
+            txtIdCategoria.Clear();
+            txtNombreCat.Clear();
+            txtDescripcion.Clear();
+            //limpiar tabla de vista previa
+            dataPreviewRegistro.Rows.Clear();
+            //volver a habilitar boton de preview y deshabilitar boton de guardar
+            btnPrevisual.Enabled = true;
+            btnGuardarCat.Enabled = false;
+        }
     }
 }

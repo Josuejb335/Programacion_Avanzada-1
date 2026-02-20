@@ -1,3 +1,6 @@
+using CapaAccesoDatos;
+using CapaLogicaNegocio;
+
 namespace CapaPresentacion
 {
     public partial class FrmMenuPrincipal : Form
@@ -114,6 +117,25 @@ namespace CapaPresentacion
         private void btnRegistrarCat_Click(object sender, EventArgs e)
         {
             AbrirFormularioEnPanel(new FrmRegistrarCategoria());
+        }
+
+        private void btnRegistrarVehiculo_Click(object sender, EventArgs e)
+        {
+            if (LogicaCat.contadorArrayCat == 0)
+            {
+                MessageBox.Show("Debe registrar al menos una categoría antes de registrar un vehículo.",
+                    "Categoría Requerida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                AbrirFormularioEnPanel(new FrmRegistrarVehiculo());
+            }
+
+
+
+
+
         }
     }
 }

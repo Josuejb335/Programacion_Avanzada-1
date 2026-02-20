@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtIdCategoria = new TextBox();
+            components = new System.ComponentModel.Container();
             dataPreviewRegistro = new DataGridView();
             IdCat = new DataGridViewTextBoxColumn();
             NombreCat = new DataGridViewTextBoxColumn();
@@ -42,17 +42,11 @@
             lblDescripcion = new Label();
             txtDescripcion = new TextBox();
             btnPrevisual = new Button();
+            txtIdCategoria = new MaskedTextBox();
+            error1 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)dataPreviewRegistro).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)error1).BeginInit();
             SuspendLayout();
-            // 
-            // txtIdCategoria
-            // 
-            txtIdCategoria.BackColor = SystemColors.ActiveBorder;
-            txtIdCategoria.Location = new Point(28, 50);
-            txtIdCategoria.Name = "txtIdCategoria";
-            txtIdCategoria.PlaceholderText = "ID Categoria";
-            txtIdCategoria.Size = new Size(252, 23);
-            txtIdCategoria.TabIndex = 0;
             // 
             // dataPreviewRegistro
             // 
@@ -107,6 +101,7 @@
             // 
             // btnGuardarCat
             // 
+            btnGuardarCat.Enabled = false;
             btnGuardarCat.Font = new Font("Segoe UI", 12F);
             btnGuardarCat.Location = new Point(160, 449);
             btnGuardarCat.Name = "btnGuardarCat";
@@ -114,6 +109,7 @@
             btnGuardarCat.TabIndex = 4;
             btnGuardarCat.Text = "Guardar Categoria";
             btnGuardarCat.UseVisualStyleBackColor = true;
+            btnGuardarCat.Click += btnGuardarCat_Click;
             // 
             // lblIngreseID
             // 
@@ -177,6 +173,19 @@
             btnPrevisual.UseVisualStyleBackColor = true;
             btnPrevisual.Click += btnPrevisual_Click;
             // 
+            // txtIdCategoria
+            // 
+            txtIdCategoria.BackColor = SystemColors.ActiveBorder;
+            txtIdCategoria.Location = new Point(28, 50);
+            txtIdCategoria.Mask = "000000";
+            txtIdCategoria.Name = "txtIdCategoria";
+            txtIdCategoria.Size = new Size(252, 23);
+            txtIdCategoria.TabIndex = 11;
+            // 
+            // error1
+            // 
+            error1.ContainerControl = this;
+            // 
             // FrmRegistrarCategoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -184,6 +193,7 @@
             BackColor = Color.LightGray;
             BackgroundImage = Properties.Resources.bgPnlContenedor;
             ClientSize = new Size(906, 547);
+            Controls.Add(txtIdCategoria);
             Controls.Add(btnPrevisual);
             Controls.Add(lblDescripcion);
             Controls.Add(txtDescripcion);
@@ -194,19 +204,17 @@
             Controls.Add(btnLimpiar);
             Controls.Add(lblInfoVistaPrevia);
             Controls.Add(dataPreviewRegistro);
-            Controls.Add(txtIdCategoria);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmRegistrarCategoria";
             Text = "FrmRegistrarCategoria";
             Load += FrmRegistrarCategoria_Load;
             ((System.ComponentModel.ISupportInitialize)dataPreviewRegistro).EndInit();
+            ((System.ComponentModel.ISupportInitialize)error1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox txtIdCategoria;
         private DataGridView dataPreviewRegistro;
         private DataGridViewTextBoxColumn IdCat;
         private DataGridViewTextBoxColumn NombreCat;
@@ -220,5 +228,7 @@
         private Label lblDescripcion;
         private TextBox txtDescripcion;
         private Button btnPrevisual;
+        private MaskedTextBox txtIdCategoria;
+        private ErrorProvider error1;
     }
 }
