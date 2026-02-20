@@ -34,16 +34,24 @@
             NombreCat = new DataGridViewTextBoxColumn();
             Descripcion = new DataGridViewTextBoxColumn();
             lblInfoVistaPrevia = new Label();
+            btnLimpiar = new Button();
+            btnGuardarCat = new Button();
+            lblIngreseID = new Label();
+            lblIngreseNombre = new Label();
+            txtNombreCat = new TextBox();
+            lblDescripcion = new Label();
+            txtDescripcion = new TextBox();
+            btnPrevisual = new Button();
             ((System.ComponentModel.ISupportInitialize)dataPreviewRegistro).BeginInit();
             SuspendLayout();
             // 
             // txtIdCategoria
             // 
             txtIdCategoria.BackColor = SystemColors.ActiveBorder;
-            txtIdCategoria.Location = new Point(34, 52);
+            txtIdCategoria.Location = new Point(28, 50);
             txtIdCategoria.Name = "txtIdCategoria";
             txtIdCategoria.PlaceholderText = "ID Categoria";
-            txtIdCategoria.Size = new Size(283, 23);
+            txtIdCategoria.Size = new Size(252, 23);
             txtIdCategoria.TabIndex = 0;
             // 
             // dataPreviewRegistro
@@ -51,10 +59,11 @@
             dataPreviewRegistro.BackgroundColor = Color.LightGray;
             dataPreviewRegistro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataPreviewRegistro.Columns.AddRange(new DataGridViewColumn[] { IdCat, NombreCat, Descripcion });
-            dataPreviewRegistro.Location = new Point(12, 324);
+            dataPreviewRegistro.Location = new Point(26, 324);
             dataPreviewRegistro.Name = "dataPreviewRegistro";
-            dataPreviewRegistro.Size = new Size(868, 164);
+            dataPreviewRegistro.Size = new Size(868, 119);
             dataPreviewRegistro.TabIndex = 1;
+            dataPreviewRegistro.CellContentClick += dataPreviewRegistro_CellContentClick;
             // 
             // IdCat
             // 
@@ -77,11 +86,96 @@
             // lblInfoVistaPrevia
             // 
             lblInfoVistaPrevia.AutoSize = true;
-            lblInfoVistaPrevia.Location = new Point(18, 291);
+            lblInfoVistaPrevia.BackColor = Color.Silver;
+            lblInfoVistaPrevia.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInfoVistaPrevia.Location = new Point(28, 291);
             lblInfoVistaPrevia.Name = "lblInfoVistaPrevia";
-            lblInfoVistaPrevia.Size = new Size(331, 15);
+            lblInfoVistaPrevia.Size = new Size(276, 20);
             lblInfoVistaPrevia.TabIndex = 2;
-            lblInfoVistaPrevia.Text = "Vista Previa de Datos  a Registrar ( Visualice si estan correctos)";
+            lblInfoVistaPrevia.Text = "Vista Previa de Datos antes de Registrar ";
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.Font = new Font("Segoe UI", 12F);
+            btnLimpiar.Location = new Point(26, 449);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(128, 32);
+            btnLimpiar.TabIndex = 3;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
+            // 
+            // btnGuardarCat
+            // 
+            btnGuardarCat.Font = new Font("Segoe UI", 12F);
+            btnGuardarCat.Location = new Point(160, 449);
+            btnGuardarCat.Name = "btnGuardarCat";
+            btnGuardarCat.Size = new Size(165, 32);
+            btnGuardarCat.TabIndex = 4;
+            btnGuardarCat.Text = "Guardar Categoria";
+            btnGuardarCat.UseVisualStyleBackColor = true;
+            // 
+            // lblIngreseID
+            // 
+            lblIngreseID.AutoSize = true;
+            lblIngreseID.BackColor = Color.Silver;
+            lblIngreseID.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIngreseID.Location = new Point(28, 27);
+            lblIngreseID.Name = "lblIngreseID";
+            lblIngreseID.Size = new Size(252, 20);
+            lblIngreseID.TabIndex = 5;
+            lblIngreseID.Text = "Ingrese el ID de categoria (6 digitos)";
+            // 
+            // lblIngreseNombre
+            // 
+            lblIngreseNombre.AutoSize = true;
+            lblIngreseNombre.BackColor = Color.Silver;
+            lblIngreseNombre.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIngreseNombre.Location = new Point(28, 97);
+            lblIngreseNombre.Name = "lblIngreseNombre";
+            lblIngreseNombre.Size = new Size(235, 20);
+            lblIngreseNombre.TabIndex = 7;
+            lblIngreseNombre.Text = "Ingrese el nombre de la Categoria";
+            // 
+            // txtNombreCat
+            // 
+            txtNombreCat.BackColor = SystemColors.ActiveBorder;
+            txtNombreCat.Location = new Point(28, 120);
+            txtNombreCat.Name = "txtNombreCat";
+            txtNombreCat.PlaceholderText = "Nombre Categoria";
+            txtNombreCat.Size = new Size(252, 23);
+            txtNombreCat.TabIndex = 6;
+            // 
+            // lblDescripcion
+            // 
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.BackColor = Color.Silver;
+            lblDescripcion.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDescripcion.Location = new Point(28, 163);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(153, 20);
+            lblDescripcion.TabIndex = 9;
+            lblDescripcion.Text = "Ingrese la descripcion";
+            // 
+            // txtDescripcion
+            // 
+            txtDescripcion.BackColor = SystemColors.ActiveBorder;
+            txtDescripcion.Location = new Point(28, 186);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.PlaceholderText = "Descripcion";
+            txtDescripcion.Size = new Size(252, 23);
+            txtDescripcion.TabIndex = 8;
+            // 
+            // btnPrevisual
+            // 
+            btnPrevisual.Font = new Font("Segoe UI", 12F);
+            btnPrevisual.Location = new Point(26, 232);
+            btnPrevisual.Name = "btnPrevisual";
+            btnPrevisual.Size = new Size(165, 32);
+            btnPrevisual.TabIndex = 10;
+            btnPrevisual.Text = "Previsualizar Datos";
+            btnPrevisual.UseVisualStyleBackColor = true;
+            btnPrevisual.Click += btnPrevisual_Click;
             // 
             // FrmRegistrarCategoria
             // 
@@ -90,12 +184,21 @@
             BackColor = Color.LightGray;
             BackgroundImage = Properties.Resources.bgPnlContenedor;
             ClientSize = new Size(906, 547);
+            Controls.Add(btnPrevisual);
+            Controls.Add(lblDescripcion);
+            Controls.Add(txtDescripcion);
+            Controls.Add(lblIngreseNombre);
+            Controls.Add(txtNombreCat);
+            Controls.Add(lblIngreseID);
+            Controls.Add(btnGuardarCat);
+            Controls.Add(btnLimpiar);
             Controls.Add(lblInfoVistaPrevia);
             Controls.Add(dataPreviewRegistro);
             Controls.Add(txtIdCategoria);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmRegistrarCategoria";
             Text = "FrmRegistrarCategoria";
+            Load += FrmRegistrarCategoria_Load;
             ((System.ComponentModel.ISupportInitialize)dataPreviewRegistro).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -109,5 +212,13 @@
         private DataGridViewTextBoxColumn NombreCat;
         private DataGridViewTextBoxColumn Descripcion;
         private Label lblInfoVistaPrevia;
+        private Button btnLimpiar;
+        private Button btnGuardarCat;
+        private Label lblIngreseID;
+        private Label lblIngreseNombre;
+        private TextBox txtNombreCat;
+        private Label lblDescripcion;
+        private TextBox txtDescripcion;
+        private Button btnPrevisual;
     }
 }
