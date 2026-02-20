@@ -30,6 +30,7 @@
         {
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             topPanel = new Panel();
+            txtTitulo = new Label();
             btnMinimizar = new PictureBox();
             btnCerrar = new PictureBox();
             panelContenedorBtns = new Panel();
@@ -41,6 +42,7 @@
             btnRegistrarVehiculo = new Button();
             imgLogo = new PictureBox();
             btnRegistrarCat = new Button();
+            pnlContenedor = new Panel();
             topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).BeginInit();
@@ -50,17 +52,29 @@
             // 
             // topPanel
             // 
-            topPanel.BackColor = SystemColors.ControlDarkDark;
+            topPanel.BackColor = Color.Maroon;
+            topPanel.Controls.Add(txtTitulo);
             topPanel.Controls.Add(btnMinimizar);
             topPanel.Controls.Add(btnCerrar);
             topPanel.Dock = DockStyle.Top;
             topPanel.Location = new Point(0, 0);
             topPanel.Name = "topPanel";
-            topPanel.Size = new Size(1280, 23);
+            topPanel.Size = new Size(1280, 80);
             topPanel.TabIndex = 0;
             topPanel.MouseDown += topPanel_MouseDown;
             topPanel.MouseMove += topPanel_MouseMove;
             topPanel.MouseUp += topPanel_MouseUp;
+            // 
+            // txtTitulo
+            // 
+            txtTitulo.AutoSize = true;
+            txtTitulo.Font = new Font("Sitka Banner", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTitulo.ForeColor = SystemColors.ButtonFace;
+            txtTitulo.Location = new Point(3, 9);
+            txtTitulo.Name = "txtTitulo";
+            txtTitulo.Size = new Size(325, 53);
+            txtTitulo.TabIndex = 3;
+            txtTitulo.Text = "Gestión AutoMarket";
             // 
             // btnMinimizar
             // 
@@ -104,7 +118,7 @@
             panelContenedorBtns.Controls.Add(btnRegistrarVehiculo);
             panelContenedorBtns.Controls.Add(imgLogo);
             panelContenedorBtns.Controls.Add(btnRegistrarCat);
-            panelContenedorBtns.Location = new Point(34, 101);
+            panelContenedorBtns.Location = new Point(24, 129);
             panelContenedorBtns.Name = "panelContenedorBtns";
             panelContenedorBtns.Size = new Size(282, 547);
             panelContenedorBtns.TabIndex = 1;
@@ -115,6 +129,7 @@
             btnAsociar.BackgroundImage = Properties.Resources.bgBotones;
             btnAsociar.Cursor = Cursors.Hand;
             btnAsociar.FlatAppearance.BorderSize = 0;
+            btnAsociar.FlatAppearance.MouseOverBackColor = Color.LightGray;
             btnAsociar.FlatStyle = FlatStyle.Flat;
             btnAsociar.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAsociar.Location = new Point(18, 216);
@@ -130,6 +145,7 @@
             btnRegistrarCliente.BackgroundImage = Properties.Resources.bgBotones;
             btnRegistrarCliente.Cursor = Cursors.Hand;
             btnRegistrarCliente.FlatAppearance.BorderSize = 0;
+            btnRegistrarCliente.FlatAppearance.MouseOverBackColor = Color.LightGray;
             btnRegistrarCliente.FlatStyle = FlatStyle.Flat;
             btnRegistrarCliente.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
             btnRegistrarCliente.Location = new Point(18, 176);
@@ -146,6 +162,7 @@
             btnConsultarInfo.Cursor = Cursors.Hand;
             btnConsultarInfo.FlatAppearance.BorderColor = Color.Black;
             btnConsultarInfo.FlatAppearance.BorderSize = 0;
+            btnConsultarInfo.FlatAppearance.MouseOverBackColor = Color.LightGray;
             btnConsultarInfo.FlatStyle = FlatStyle.Flat;
             btnConsultarInfo.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
             btnConsultarInfo.Location = new Point(18, 256);
@@ -154,7 +171,6 @@
             btnConsultarInfo.TabIndex = 6;
             btnConsultarInfo.Text = "Consultar Informacion";
             btnConsultarInfo.UseVisualStyleBackColor = false;
-            btnConsultarInfo.Click += button4_Click;
             // 
             // btnRegistrarSucursal
             // 
@@ -162,6 +178,7 @@
             btnRegistrarSucursal.BackgroundImage = Properties.Resources.bgBotones;
             btnRegistrarSucursal.Cursor = Cursors.Hand;
             btnRegistrarSucursal.FlatAppearance.BorderSize = 0;
+            btnRegistrarSucursal.FlatAppearance.MouseOverBackColor = Color.LightGray;
             btnRegistrarSucursal.FlatStyle = FlatStyle.Flat;
             btnRegistrarSucursal.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
             btnRegistrarSucursal.Location = new Point(18, 136);
@@ -177,6 +194,7 @@
             btnRegistrarVendedor.BackgroundImage = Properties.Resources.bgBotones;
             btnRegistrarVendedor.Cursor = Cursors.Hand;
             btnRegistrarVendedor.FlatAppearance.BorderSize = 0;
+            btnRegistrarVendedor.FlatAppearance.MouseOverBackColor = Color.LightGray;
             btnRegistrarVendedor.FlatStyle = FlatStyle.Flat;
             btnRegistrarVendedor.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
             btnRegistrarVendedor.Location = new Point(18, 96);
@@ -192,6 +210,7 @@
             btnRegistrarVehiculo.BackgroundImage = Properties.Resources.bgBotones;
             btnRegistrarVehiculo.Cursor = Cursors.Hand;
             btnRegistrarVehiculo.FlatAppearance.BorderSize = 0;
+            btnRegistrarVehiculo.FlatAppearance.MouseOverBackColor = Color.LightGray;
             btnRegistrarVehiculo.FlatStyle = FlatStyle.Flat;
             btnRegistrarVehiculo.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold);
             btnRegistrarVehiculo.Location = new Point(18, 56);
@@ -200,7 +219,6 @@
             btnRegistrarVehiculo.TabIndex = 3;
             btnRegistrarVehiculo.Text = "Registrar Vehiculo";
             btnRegistrarVehiculo.UseVisualStyleBackColor = false;
-            btnRegistrarVehiculo.Click += button1_Click;
             // 
             // imgLogo
             // 
@@ -219,6 +237,7 @@
             btnRegistrarCat.BackgroundImage = Properties.Resources.bgBotones;
             btnRegistrarCat.Cursor = Cursors.Hand;
             btnRegistrarCat.FlatAppearance.BorderSize = 0;
+            btnRegistrarCat.FlatAppearance.MouseOverBackColor = Color.LightGray;
             btnRegistrarCat.FlatStyle = FlatStyle.Flat;
             btnRegistrarCat.Font = new Font("Malgun Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRegistrarCat.Location = new Point(18, 16);
@@ -227,6 +246,15 @@
             btnRegistrarCat.TabIndex = 0;
             btnRegistrarCat.Text = "Registrar Cat Vehiculo";
             btnRegistrarCat.UseVisualStyleBackColor = false;
+            btnRegistrarCat.Click += btnRegistrarCat_Click;
+            // 
+            // pnlContenedor
+            // 
+            pnlContenedor.BackColor = Color.Transparent;
+            pnlContenedor.Location = new Point(351, 129);
+            pnlContenedor.Name = "pnlContenedor";
+            pnlContenedor.Size = new Size(906, 547);
+            pnlContenedor.TabIndex = 2;
             // 
             // FrmMenuPrincipal
             // 
@@ -234,14 +262,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
             ClientSize = new Size(1280, 720);
+            Controls.Add(pnlContenedor);
             Controls.Add(panelContenedorBtns);
             Controls.Add(topPanel);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmMenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "MenuPrincipal";
             Load += FrmMenuPrincipal_Load;
             topPanel.ResumeLayout(false);
+            topPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnCerrar).EndInit();
             panelContenedorBtns.ResumeLayout(false);
@@ -264,5 +294,7 @@
         private Button btnRegistrarSucursal;
         private Button btnRegistrarVendedor;
         private Button btnRegistrarVehiculo;
+        private Label txtTitulo;
+        private Panel pnlContenedor;
     }
 }

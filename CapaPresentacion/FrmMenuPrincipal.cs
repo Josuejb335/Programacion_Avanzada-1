@@ -70,20 +70,17 @@ namespace CapaPresentacion
             arrastrando = false;
         }
 
-        // --- Eventos para el botón Cerrar ---
+        //cambiar colores de botones al pasar el mouse por encima
         private void btnCerrar_MouseEnter(object sender, EventArgs e)
         {
-            // Cambia a un rojo más oscuro cuando el mouse entra
             btnCerrar.BackColor = Color.DarkRed;
         }
 
         private void btnCerrar_MouseLeave(object sender, EventArgs e)
         {
-            // Vuelve al rojo original cuando el mouse sale
             btnCerrar.BackColor = Color.Red;
         }
 
-        // --- Eventos para el botón Minimizar ---
         private void btnMinimizar_MouseEnter(object sender, EventArgs e)
         {
             btnMinimizar.BackColor = Color.DarkGreen;
@@ -94,19 +91,29 @@ namespace CapaPresentacion
             btnMinimizar.BackColor = Color.LimeGreen;
         }
 
+        // metodo para abrir todos los submenus dentro del espacio vacio del panel contenedor
+        private void AbrirFormularioEnPanel(object formHijo)
+        {
+            // Si hay algo dentro del panel se elimina para mostrar el nuevo formulario
+            if (this.pnlContenedor.Controls.Count > 0)
+                this.pnlContenedor.Controls.RemoveAt(0);
+
+            // se crea el formulario como un control de bajo nivel
+            Form fh = formHijo as Form;
+            fh.TopLevel = false; // inidicar que no es una ventana independiente
+            fh.FormBorderStyle = FormBorderStyle.None; // Quita los bordes de la ventana hija
+            fh.Dock = DockStyle.Fill; // Hace que llene todo el panel
+
+            // Se añade al panel y se muestra
+            this.pnlContenedor.Controls.Add(fh);
+            this.pnlContenedor.Tag = fh;
+            fh.Show();
+        }
+
+        //abrir submenus con la funcion AbrirFormularioEnPanel
         private void btnRegistrarCat_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
+            AbrirFormularioEnPanel(new FrmRegistrarCategoria());
         }
     }
 }
