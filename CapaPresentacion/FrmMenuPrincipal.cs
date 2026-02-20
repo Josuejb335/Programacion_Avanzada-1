@@ -86,14 +86,27 @@ namespace CapaPresentacion
         // --- Eventos para el botón Minimizar ---
         private void btnMinimizar_MouseEnter(object sender, EventArgs e)
         {
-            btnMinimizar.BackColor = Color.Green;
+            btnMinimizar.BackColor = Color.DarkGreen;
         }
 
         private void btnMinimizar_MouseLeave(object sender, EventArgs e)
         {
-            btnMinimizar.BackColor = Color.DarkGreen;
+            btnMinimizar.BackColor = Color.LimeGreen;
         }
 
-       
+        private void btnRegistrarCat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

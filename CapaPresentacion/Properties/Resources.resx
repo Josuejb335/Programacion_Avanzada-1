@@ -118,9 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bgBotones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bgBotones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>fondo para los botones del MenuP</comment>
+  </data>
+  <data name="fondoPanelContBtnsMP" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondoPanelContBtns.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>fondo panel contenedor menu pri</comment>
+  </data>
   <data name="iconMinimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>icono minimizar ventana</comment>
+  </data>
+  <data name="iconMinimizar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>icono minimizar ventana 2</comment>
   </data>
   <data name="iconoCerrarV" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrarV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
