@@ -129,6 +129,15 @@
     <value>..\Resources\fondoPanelContBtns.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>fondo panel contenedor menu pri</comment>
   </data>
+  <data name="iconAnio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Users\Josue\Pictures\iconAnio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconCategoria" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Users\Josue\Pictures\iconCategoria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconMarca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconMarca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconMinimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>icono minimizar ventana</comment>
@@ -137,9 +146,21 @@
     <value>..\Resources\minimizar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>icono minimizar ventana 2</comment>
   </data>
+  <data name="iconModelo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Users\Josue\Pictures\iconModelo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconNew" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Users\Josue\Pictures\iconNew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconoCerrarV" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrarV.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>icono cerrar ventana</comment>
+  </data>
+  <data name="iconPrice" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Users\Josue\Pictures\iconPrice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconVehicule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\..\..\Users\Josue\Pictures\iconVehicule.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logoAutoMarket" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoAutoMarket-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -121,7 +121,8 @@ namespace CapaPresentacion
 
         private void btnRegistrarVehiculo_Click(object sender, EventArgs e)
         {
-            if (LogicaCat.contadorArrayCat == 0)
+            //revisa si hay al menos una categoría
+            if (LogicaGeneral.contadorArrayCat == 0)
             {
                 MessageBox.Show("Debe registrar al menos una categoría antes de registrar un vehículo.",
                     "Categoría Requerida", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -135,6 +136,12 @@ namespace CapaPresentacion
 
 
 
+
+        }
+
+        private void btnRegistrarVendedor_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel(new FrmRegistrarVendedor());
 
         }
     }

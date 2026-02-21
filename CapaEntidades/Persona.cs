@@ -8,15 +8,15 @@ namespace CapaEntidades
     public class Persona
     {
         //atributos
-        protected string Identificacion { get; set; }
-        protected string NombreCompleto { get; set; }
-        protected DateTime FechaNacimiento { get; set; }
+        public string Identificacion { get; set; }
+        public string Nombre { get; set; }
+        public DateTime FechaNacimiento { get; set; }
 
         //constructor
-        protected Persona(string identificacion, string nombreCompleto, DateTime fechaNacimiento)
+        public Persona(string identificacion, string nombre, DateTime fechaNacimiento)
         {
             Identificacion = identificacion;
-            NombreCompleto = nombreCompleto;
+            Nombre = nombre;
             FechaNacimiento = fechaNacimiento;
         }
 

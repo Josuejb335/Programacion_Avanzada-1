@@ -13,12 +13,6 @@ namespace CapaEntidades
         private string Direccion { get; set; }
         private string Telefono { get; set; }
         private bool Activo { get; set; }
-        private Vendedor vendedorEncargado
-        {
-            get { return vendedorEncargado; }
-            set { vendedorEncargado = value; }
-        }
-
-
+        private Vendedor vendedorEncargado { get; set; }
     }
 }

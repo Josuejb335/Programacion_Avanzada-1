@@ -203,6 +203,7 @@
             btnRegistrarVendedor.TabIndex = 4;
             btnRegistrarVendedor.Text = "Registrar Vendedor";
             btnRegistrarVendedor.UseVisualStyleBackColor = false;
+            btnRegistrarVendedor.Click += btnRegistrarVendedor_Click;
             // 
             // btnRegistrarVehiculo
             // 

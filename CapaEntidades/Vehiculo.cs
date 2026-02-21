@@ -10,20 +10,16 @@ namespace CapaEntidades
     public class Vehiculo
     {
         // atributos
-        private int IdVehiculo { get; set; }
-        private string Marca { get; set; }
-        private string Modelo { get; set; }
-        private int Anio { get; set; }
-        private decimal Precio { get; set; }
-        private char Estado { get; set; }
-        private CategoriaVehiculo Categoria
-        {
-            get { return Categoria; }
-            set { Categoria = value; }
-        }
+        public int IdVehiculo { get; set; }
+        public string Marca { get; set; }
+        public string Modelo { get; set; }
+        public int Anio { get; set; }
+        public decimal Precio { get; set; }
+        public char Estado { get; set; }
+        public CategoriaVehiculo Categoria { get; set; } 
 
         //constructor
-       public Vehiculo(int id, string marca, string modelo, int anio, decimal precio, char estado, CategoriaVehiculo categoria)
+        public Vehiculo(int id, string marca, string modelo, int anio, decimal precio, char estado, CategoriaVehiculo categoria)
         {
             this.IdVehiculo = id;
             this.Marca = marca;
@@ -33,5 +29,6 @@ namespace CapaEntidades
             this.Estado = estado;
             this.Categoria = categoria;
         }
+        public Vehiculo() { }   
     }
 }

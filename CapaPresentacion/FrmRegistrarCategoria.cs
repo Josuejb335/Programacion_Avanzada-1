@@ -17,7 +17,9 @@ namespace CapaPresentacion
         //variable para impedir guardar datos sin previsualizar
         bool datosPrevisualizados = false;
         //objeto de logica de negocio para acceder al metodo de agregar categoria
-        LogicaCat gestorLogica = new LogicaCat();
+        LogicaGeneral gestorLogica = new LogicaGeneral();
+        //variable por si hubo error en el metodo de guardar
+        bool huboError = false;
 
         public FrmRegistrarCategoria()
         {
@@ -107,21 +109,26 @@ namespace CapaPresentacion
                 {
                     // crear objeto de tipo CategoriaVehiculo con los datos de cada fila y agregarlo al ArrayL de objetos
                     CategoriaVehiculo cat = new CategoriaVehiculo();
-                    cat.IdCategoria = fila.Cells[0].Value.ToString();
+                    cat.IdCategoria = fila.Cells[0].Value.ToString().Trim();
                     cat.NombreCategoria = fila.Cells[1].Value.ToString();
                     cat.Descripcion = fila.Cells[2].Value.ToString();
+                   
                     //llamar metodo para agregar categoria al ArrayL de objetos y mostrar mensaje de resultado
-                    string resultado = gestorLogica.AgregarCategoria(cat);
-                    if (resultado.Contains("Error"))
+                    string resultado = gestorLogica.AgregarElemento(cat: cat);
+                    if (resultado.Contains("ERROR"))
                     {
                         MessageBox.Show(resultado, "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        huboError = true;
                         break; //salir del bucle si hay un error
                     }
                 }
             }
-            MessageBox.Show("Proceso de guardado finalizado.", "Guardado Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dataPreviewRegistro.Rows.Clear(); //limpiar tabla de vista previa despues de guardar
-            
+            if (!huboError)
+            {
+                MessageBox.Show("Todos los registros se guardaron con éxito.", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Solo se limpia si todo salió bien
+                dataPreviewRegistro.Rows.Clear();
+            }
             //limpiar los campos de texto
             txtIdCategoria.Clear();
             txtNombreCat.Clear();
