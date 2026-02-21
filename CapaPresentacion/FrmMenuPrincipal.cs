@@ -132,17 +132,27 @@ namespace CapaPresentacion
             {
                 AbrirFormularioEnPanel(new FrmRegistrarVehiculo());
             }
-
-
-
-
-
         }
 
         private void btnRegistrarVendedor_Click(object sender, EventArgs e)
         {
             AbrirFormularioEnPanel(new FrmRegistrarVendedor());
 
+        }
+
+        private void btnRegistrarSucursal_Click(object sender, EventArgs e)
+        {
+            //revisa si hay al menos un vendedor para asignar como encargado
+            if (LogicaGeneral.contadorArrayVend == 0)
+            {
+                MessageBox.Show("Debe registrar al menos un Vendedor antes de registrar una sucursal.",
+                    "Vendedor Encargado Requerido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                AbrirFormularioEnPanel(new FrmRegistrarSuc());
+            }
         }
     }
 }

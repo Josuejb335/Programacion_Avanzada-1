@@ -16,10 +16,12 @@ namespace CapaLogicaNegocio
         //contador para llevar el control de la cantidad de categorias agregadas al arreglo de categorias en la clase Almacenamiento
         public static int contadorArrayCat = 0;
         public static int contadorArrayVeh = 0;
+        public static int contadorArrayVend = 0;
+        public static int contadorArraySuc = 0;
 
 
         //metodo para agregar una nueva categoria al arreglo de categorias en la clase Almacenamiento
-        public string AgregarElemento(CategoriaVehiculo cat = null, Vehiculo veh = null, Vendedor vend = null)
+        public string AgregarElemento(CategoriaVehiculo cat = null, Vehiculo veh = null, Vendedor vend = null, Sucursal suc = null)
         {
             try
             {   
@@ -53,7 +55,7 @@ namespace CapaLogicaNegocio
                         return "ERROR  El Vehiculo con el ID " + veh.IdVehiculo + " ya existe. No se puede agregar.";
                     }
 
-                    //se busca el primer espacio vacio del arreglo para agregar la nueva categoria
+                    //se busca el primer espacio vacio del arreglo para agregar el nuevo vehiculo
                     for (int i = 0; i < Almacenamiento.ArrayVehiculos.Length; i++)
                     {
                         if (Almacenamiento.ArrayVehiculos[i] == null)
@@ -73,20 +75,39 @@ namespace CapaLogicaNegocio
                         return "ERROR  El Vendedor con el ID " + vend.IdVendedor + " ya existe. No se puede agregar.";
                     }
 
-                    //se busca el primer espacio vacio del arreglo para agregar la nueva categoria
+                    //se busca el primer espacio vacio del arreglo para agregar el nuevo vendedor
                     for (int i = 0; i < Almacenamiento.ArrayVendedores.Length; i++)
                     {
                         if (Almacenamiento.ArrayVendedores[i] == null)
                         {
                             Almacenamiento.ArrayVendedores[i] = vend;
-                            contadorArrayVeh++;
+                            contadorArrayVend++;
                             return "Vendedor agregada con exito";
                         }
                     }
                     return "No se pudo agregar el Vendedor, el almacenamiento esta lleno";
                 }
                 //guardar sucursal
+                if (suc != null)
+                {
+                    if (ExisteSucursal(suc.IdSucursal))
+                    {
+                        return "ERROR La sucursal con el ID " + vend.IdVendedor + " ya existe. No se puede agregar.";
+                    }
 
+                    //se busca el primer espacio vacio del arreglo para agregar la nueva sucursal
+                    for (int i = 0; i < Almacenamiento.ArraySucursales.Length; i++)
+                    {
+                        if (Almacenamiento.ArraySucursales[i] == null)
+                        {
+                            Almacenamiento.ArraySucursales[i] = suc;
+                            contadorArrayVend++;
+                            return "Sucursal agregada con exito";
+                        }
+                    }
+                    return "No se pudo agregar la Sucursal, el almacenamiento esta lleno";
+                }
+                //guardar cliente
 
 
 
@@ -120,7 +141,7 @@ namespace CapaLogicaNegocio
             return false; //no se encontró la categoría
         }
 
-        //metodo para verificar si un ID de vehiculo existe en el arreglo de categorias
+        //metodo para verificar si un ID de vehiculo existe en el arreglo de vehiculos
         public bool ExisteVehiculo(int idBusqueda)
         {
             for (int i = 0; i < Almacenamiento.ArrayVehiculos.Length; i++)
@@ -138,7 +159,7 @@ namespace CapaLogicaNegocio
             return false; //no se encontró el vehiculo
         }
 
-        //metodo para verificar si un ID de vendedor existe en el arreglo de categorias
+        //metodo para verificar si un ID de vendedor existe en el arreglo de vendeores
         public bool ExisteVendedor(int idBusqueda)
         {
             for (int i = 0; i < Almacenamiento.ArrayVendedores.Length; i++)
@@ -154,6 +175,24 @@ namespace CapaLogicaNegocio
                 }
             }
             return false; //no se encontró el vendedor
+        }
+
+        //metodo para verificar si un ID de sucursal existe en el arreglo de sucursales
+        public bool ExisteSucursal(int idBusqueda)
+        {
+            for (int i = 0; i < Almacenamiento.ArraySucursales.Length; i++)
+            {
+                // saltar espacios vacíos para evitar errores de referencia nula
+                if (Almacenamiento.ArraySucursales[i] != null)
+                {
+                    // se compara 
+                    if (Almacenamiento.ArraySucursales[i].IdSucursal == idBusqueda)
+                    {
+                        return true; // se encontró la sucursal
+                    }
+                }
+            }
+            return false; //no se encontró la sucursal
         }
 
 

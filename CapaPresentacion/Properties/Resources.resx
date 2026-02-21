@@ -125,6 +125,9 @@
   <data name="bgPnlContenedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\..\..\Users\Josue\Pictures\bgPnlContenedor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fondoContenedor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondoContenedor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fondoPanelContBtnsMP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondoPanelContBtns.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
     <comment>fondo panel contenedor menu pri</comment>

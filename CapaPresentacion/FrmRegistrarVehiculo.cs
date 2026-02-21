@@ -114,7 +114,17 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            
+
+        }
+
+        private void imgAnio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblModelo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

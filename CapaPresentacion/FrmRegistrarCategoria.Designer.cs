@@ -30,9 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             dataPreviewRegistro = new DataGridView();
-            IdCat = new DataGridViewTextBoxColumn();
-            NombreCat = new DataGridViewTextBoxColumn();
-            Descripcion = new DataGridViewTextBoxColumn();
             lblInfoVistaPrevia = new Label();
             btnLimpiar = new Button();
             btnGuardarCat = new Button();
@@ -44,6 +41,9 @@
             btnPrevisual = new Button();
             txtIdCategoria = new MaskedTextBox();
             error1 = new ErrorProvider(components);
+            IdCat = new DataGridViewTextBoxColumn();
+            NombreCat = new DataGridViewTextBoxColumn();
+            Descripcion = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataPreviewRegistro).BeginInit();
             ((System.ComponentModel.ISupportInitialize)error1).BeginInit();
             SuspendLayout();
@@ -55,27 +55,9 @@
             dataPreviewRegistro.Columns.AddRange(new DataGridViewColumn[] { IdCat, NombreCat, Descripcion });
             dataPreviewRegistro.Location = new Point(26, 324);
             dataPreviewRegistro.Name = "dataPreviewRegistro";
-            dataPreviewRegistro.Size = new Size(868, 119);
+            dataPreviewRegistro.Size = new Size(583, 119);
             dataPreviewRegistro.TabIndex = 1;
             dataPreviewRegistro.CellContentClick += dataPreviewRegistro_CellContentClick;
-            // 
-            // IdCat
-            // 
-            IdCat.HeaderText = "ID Cat";
-            IdCat.Name = "IdCat";
-            IdCat.Width = 275;
-            // 
-            // NombreCat
-            // 
-            NombreCat.HeaderText = "Nombre Cat";
-            NombreCat.Name = "NombreCat";
-            NombreCat.Width = 275;
-            // 
-            // Descripcion
-            // 
-            Descripcion.HeaderText = "Descripcion";
-            Descripcion.Name = "Descripcion";
-            Descripcion.Width = 275;
             // 
             // lblInfoVistaPrevia
             // 
@@ -186,13 +168,31 @@
             // 
             error1.ContainerControl = this;
             // 
+            // IdCat
+            // 
+            IdCat.HeaderText = "ID Cat";
+            IdCat.Name = "IdCat";
+            IdCat.Width = 180;
+            // 
+            // NombreCat
+            // 
+            NombreCat.HeaderText = "Nombre Cat";
+            NombreCat.Name = "NombreCat";
+            NombreCat.Width = 180;
+            // 
+            // Descripcion
+            // 
+            Descripcion.HeaderText = "Descripcion";
+            Descripcion.Name = "Descripcion";
+            Descripcion.Width = 180;
+            // 
             // FrmRegistrarCategoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            BackgroundImage = Properties.Resources.bgPnlContenedor;
-            ClientSize = new Size(906, 547);
+            BackgroundImage = Properties.Resources.fondoContenedor;
+            ClientSize = new Size(651, 547);
             Controls.Add(txtIdCategoria);
             Controls.Add(btnPrevisual);
             Controls.Add(lblDescripcion);
@@ -216,9 +216,6 @@
 
         #endregion
         private DataGridView dataPreviewRegistro;
-        private DataGridViewTextBoxColumn IdCat;
-        private DataGridViewTextBoxColumn NombreCat;
-        private DataGridViewTextBoxColumn Descripcion;
         private Label lblInfoVistaPrevia;
         private Button btnLimpiar;
         private Button btnGuardarCat;
@@ -230,5 +227,8 @@
         private Button btnPrevisual;
         private MaskedTextBox txtIdCategoria;
         private ErrorProvider error1;
+        private DataGridViewTextBoxColumn IdCat;
+        private DataGridViewTextBoxColumn NombreCat;
+        private DataGridViewTextBoxColumn Descripcion;
     }
 }

@@ -59,7 +59,7 @@
             topPanel.Dock = DockStyle.Top;
             topPanel.Location = new Point(0, 0);
             topPanel.Name = "topPanel";
-            topPanel.Size = new Size(1280, 80);
+            topPanel.Size = new Size(1043, 80);
             topPanel.TabIndex = 0;
             topPanel.MouseDown += topPanel_MouseDown;
             topPanel.MouseMove += topPanel_MouseMove;
@@ -80,7 +80,7 @@
             // 
             btnMinimizar.BackColor = Color.LimeGreen;
             btnMinimizar.Image = Properties.Resources.iconMinimizar2;
-            btnMinimizar.Location = new Point(1234, 0);
+            btnMinimizar.Location = new Point(997, 0);
             btnMinimizar.Margin = new Padding(0);
             btnMinimizar.Name = "btnMinimizar";
             btnMinimizar.Size = new Size(23, 23);
@@ -95,7 +95,7 @@
             // 
             btnCerrar.BackColor = Color.Red;
             btnCerrar.Image = Properties.Resources.iconoCerrarV;
-            btnCerrar.Location = new Point(1257, 0);
+            btnCerrar.Location = new Point(1020, 0);
             btnCerrar.Margin = new Padding(0);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(23, 23);
@@ -187,6 +187,7 @@
             btnRegistrarSucursal.TabIndex = 5;
             btnRegistrarSucursal.Text = "Registrar Sucursal";
             btnRegistrarSucursal.UseVisualStyleBackColor = false;
+            btnRegistrarSucursal.Click += btnRegistrarSucursal_Click;
             // 
             // btnRegistrarVendedor
             // 
@@ -255,7 +256,7 @@
             pnlContenedor.BackColor = Color.Transparent;
             pnlContenedor.Location = new Point(351, 129);
             pnlContenedor.Name = "pnlContenedor";
-            pnlContenedor.Size = new Size(906, 547);
+            pnlContenedor.Size = new Size(651, 547);
             pnlContenedor.TabIndex = 2;
             // 
             // FrmMenuPrincipal
@@ -263,7 +264,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            ClientSize = new Size(1280, 720);
+            ClientSize = new Size(1043, 720);
             Controls.Add(pnlContenedor);
             Controls.Add(panelContenedorBtns);
             Controls.Add(topPanel);
