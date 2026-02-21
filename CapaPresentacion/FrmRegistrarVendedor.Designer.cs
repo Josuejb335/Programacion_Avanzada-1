@@ -41,13 +41,14 @@
             lblTlfn = new Label();
             btnGuardar = new Button();
             lblIdenti = new Label();
+            lblTitulo = new Label();
             SuspendLayout();
             // 
             // txtIden
             // 
             txtIden.BackColor = SystemColors.ActiveBorder;
             txtIden.Font = new Font("Segoe UI", 12F);
-            txtIden.Location = new Point(367, 60);
+            txtIden.Location = new Point(367, 121);
             txtIden.Name = "txtIden";
             txtIden.PlaceholderText = "Identificacion";
             txtIden.Size = new Size(252, 29);
@@ -57,7 +58,7 @@
             // 
             txtId.BackColor = SystemColors.ActiveBorder;
             txtId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtId.Location = new Point(40, 60);
+            txtId.Location = new Point(40, 121);
             txtId.Mask = "000000";
             txtId.Name = "txtId";
             txtId.Size = new Size(270, 29);
@@ -68,7 +69,7 @@
             lblIngreseID.AutoSize = true;
             lblIngreseID.BackColor = Color.Silver;
             lblIngreseID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIngreseID.Location = new Point(40, 36);
+            lblIngreseID.Location = new Point(40, 97);
             lblIngreseID.Name = "lblIngreseID";
             lblIngreseID.Size = new Size(272, 21);
             lblIngreseID.TabIndex = 36;
@@ -79,7 +80,7 @@
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.Silver;
             lblNombre.Font = new Font("Segoe UI", 12F);
-            lblNombre.Location = new Point(40, 135);
+            lblNombre.Location = new Point(40, 196);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(211, 21);
             lblNombre.TabIndex = 41;
@@ -89,7 +90,7 @@
             // 
             txtNombre.BackColor = SystemColors.ActiveBorder;
             txtNombre.Font = new Font("Segoe UI", 12F);
-            txtNombre.Location = new Point(40, 161);
+            txtNombre.Location = new Point(40, 222);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Nombre Completo";
             txtNombre.Size = new Size(252, 29);
@@ -100,7 +101,7 @@
             lblNacimiento.AutoSize = true;
             lblNacimiento.BackColor = Color.Silver;
             lblNacimiento.Font = new Font("Segoe UI", 12F);
-            lblNacimiento.Location = new Point(367, 135);
+            lblNacimiento.Location = new Point(367, 196);
             lblNacimiento.Name = "lblNacimiento";
             lblNacimiento.RightToLeft = RightToLeft.Yes;
             lblNacimiento.Size = new Size(228, 21);
@@ -111,7 +112,7 @@
             // dateNacimiento
             // 
             dateNacimiento.CalendarMonthBackground = SystemColors.ActiveBorder;
-            dateNacimiento.Location = new Point(367, 161);
+            dateNacimiento.Location = new Point(367, 222);
             dateNacimiento.Name = "dateNacimiento";
             dateNacimiento.Size = new Size(252, 23);
             dateNacimiento.TabIndex = 43;
@@ -119,7 +120,7 @@
             // dateIngreso
             // 
             dateIngreso.CalendarMonthBackground = SystemColors.ActiveBorder;
-            dateIngreso.Location = new Point(367, 264);
+            dateIngreso.Location = new Point(367, 325);
             dateIngreso.Name = "dateIngreso";
             dateIngreso.Size = new Size(252, 23);
             dateIngreso.TabIndex = 45;
@@ -129,7 +130,7 @@
             lblIngresp.AutoSize = true;
             lblIngresp.BackColor = Color.Silver;
             lblIngresp.Font = new Font("Segoe UI", 12F);
-            lblIngresp.Location = new Point(367, 240);
+            lblIngresp.Location = new Point(367, 301);
             lblIngresp.Name = "lblIngresp";
             lblIngresp.Size = new Size(200, 21);
             lblIngresp.TabIndex = 44;
@@ -139,7 +140,7 @@
             // 
             txtTelefono.BackColor = SystemColors.ActiveBorder;
             txtTelefono.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtTelefono.Location = new Point(40, 264);
+            txtTelefono.Location = new Point(40, 325);
             txtTelefono.Mask = "0000-0000";
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(270, 29);
@@ -150,7 +151,7 @@
             lblTlfn.AutoSize = true;
             lblTlfn.BackColor = Color.Silver;
             lblTlfn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTlfn.Location = new Point(40, 240);
+            lblTlfn.Location = new Point(40, 301);
             lblTlfn.Name = "lblTlfn";
             lblTlfn.Size = new Size(224, 21);
             lblTlfn.TabIndex = 46;
@@ -172,11 +173,21 @@
             lblIdenti.AutoSize = true;
             lblIdenti.BackColor = Color.Silver;
             lblIdenti.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIdenti.Location = new Point(367, 36);
+            lblIdenti.Location = new Point(367, 97);
             lblIdenti.Name = "lblIdenti";
             lblIdenti.Size = new Size(177, 21);
             lblIdenti.TabIndex = 49;
             lblIdenti.Text = "Ingrese La Identificacion";
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Malgun Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(218, 9);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(228, 32);
+            lblTitulo.TabIndex = 50;
+            lblTitulo.Text = "Registro Vendedor";
             // 
             // FrmRegistrarVendedor
             // 
@@ -185,6 +196,7 @@
             BackColor = Color.LightGray;
             BackgroundImage = Properties.Resources.fondoContenedor;
             ClientSize = new Size(651, 547);
+            Controls.Add(lblTitulo);
             Controls.Add(lblIdenti);
             Controls.Add(btnGuardar);
             Controls.Add(txtTelefono);
@@ -223,5 +235,6 @@
         private Label lblTlfn;
         private Button btnGuardar;
         private Label lblIdenti;
+        private Label lblTitulo;
     }
 }

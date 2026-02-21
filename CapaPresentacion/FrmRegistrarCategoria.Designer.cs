@@ -30,6 +30,9 @@
         {
             components = new System.ComponentModel.Container();
             dataPreviewRegistro = new DataGridView();
+            IdCat = new DataGridViewTextBoxColumn();
+            NombreCat = new DataGridViewTextBoxColumn();
+            Descripcion = new DataGridViewTextBoxColumn();
             lblInfoVistaPrevia = new Label();
             btnLimpiar = new Button();
             btnGuardarCat = new Button();
@@ -41,9 +44,7 @@
             btnPrevisual = new Button();
             txtIdCategoria = new MaskedTextBox();
             error1 = new ErrorProvider(components);
-            IdCat = new DataGridViewTextBoxColumn();
-            NombreCat = new DataGridViewTextBoxColumn();
-            Descripcion = new DataGridViewTextBoxColumn();
+            lblTitulo = new Label();
             ((System.ComponentModel.ISupportInitialize)dataPreviewRegistro).BeginInit();
             ((System.ComponentModel.ISupportInitialize)error1).BeginInit();
             SuspendLayout();
@@ -53,120 +54,11 @@
             dataPreviewRegistro.BackgroundColor = Color.LightGray;
             dataPreviewRegistro.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataPreviewRegistro.Columns.AddRange(new DataGridViewColumn[] { IdCat, NombreCat, Descripcion });
-            dataPreviewRegistro.Location = new Point(26, 324);
+            dataPreviewRegistro.Location = new Point(36, 368);
             dataPreviewRegistro.Name = "dataPreviewRegistro";
             dataPreviewRegistro.Size = new Size(583, 119);
             dataPreviewRegistro.TabIndex = 1;
             dataPreviewRegistro.CellContentClick += dataPreviewRegistro_CellContentClick;
-            // 
-            // lblInfoVistaPrevia
-            // 
-            lblInfoVistaPrevia.AutoSize = true;
-            lblInfoVistaPrevia.BackColor = Color.Silver;
-            lblInfoVistaPrevia.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblInfoVistaPrevia.Location = new Point(28, 291);
-            lblInfoVistaPrevia.Name = "lblInfoVistaPrevia";
-            lblInfoVistaPrevia.Size = new Size(276, 20);
-            lblInfoVistaPrevia.TabIndex = 2;
-            lblInfoVistaPrevia.Text = "Vista Previa de Datos antes de Registrar ";
-            // 
-            // btnLimpiar
-            // 
-            btnLimpiar.Font = new Font("Segoe UI", 12F);
-            btnLimpiar.Location = new Point(26, 449);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(128, 32);
-            btnLimpiar.TabIndex = 3;
-            btnLimpiar.Text = "Limpiar";
-            btnLimpiar.UseVisualStyleBackColor = true;
-            btnLimpiar.Click += btnLimpiar_Click;
-            // 
-            // btnGuardarCat
-            // 
-            btnGuardarCat.Enabled = false;
-            btnGuardarCat.Font = new Font("Segoe UI", 12F);
-            btnGuardarCat.Location = new Point(160, 449);
-            btnGuardarCat.Name = "btnGuardarCat";
-            btnGuardarCat.Size = new Size(165, 32);
-            btnGuardarCat.TabIndex = 4;
-            btnGuardarCat.Text = "Guardar Categoria";
-            btnGuardarCat.UseVisualStyleBackColor = true;
-            btnGuardarCat.Click += btnGuardarCat_Click;
-            // 
-            // lblIngreseID
-            // 
-            lblIngreseID.AutoSize = true;
-            lblIngreseID.BackColor = Color.Silver;
-            lblIngreseID.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIngreseID.Location = new Point(28, 27);
-            lblIngreseID.Name = "lblIngreseID";
-            lblIngreseID.Size = new Size(252, 20);
-            lblIngreseID.TabIndex = 5;
-            lblIngreseID.Text = "Ingrese el ID de categoria (6 digitos)";
-            // 
-            // lblIngreseNombre
-            // 
-            lblIngreseNombre.AutoSize = true;
-            lblIngreseNombre.BackColor = Color.Silver;
-            lblIngreseNombre.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIngreseNombre.Location = new Point(28, 97);
-            lblIngreseNombre.Name = "lblIngreseNombre";
-            lblIngreseNombre.Size = new Size(235, 20);
-            lblIngreseNombre.TabIndex = 7;
-            lblIngreseNombre.Text = "Ingrese el nombre de la Categoria";
-            // 
-            // txtNombreCat
-            // 
-            txtNombreCat.BackColor = SystemColors.ActiveBorder;
-            txtNombreCat.Location = new Point(28, 120);
-            txtNombreCat.Name = "txtNombreCat";
-            txtNombreCat.PlaceholderText = "Nombre Categoria";
-            txtNombreCat.Size = new Size(252, 23);
-            txtNombreCat.TabIndex = 6;
-            // 
-            // lblDescripcion
-            // 
-            lblDescripcion.AutoSize = true;
-            lblDescripcion.BackColor = Color.Silver;
-            lblDescripcion.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDescripcion.Location = new Point(28, 163);
-            lblDescripcion.Name = "lblDescripcion";
-            lblDescripcion.Size = new Size(153, 20);
-            lblDescripcion.TabIndex = 9;
-            lblDescripcion.Text = "Ingrese la descripcion";
-            // 
-            // txtDescripcion
-            // 
-            txtDescripcion.BackColor = SystemColors.ActiveBorder;
-            txtDescripcion.Location = new Point(28, 186);
-            txtDescripcion.Name = "txtDescripcion";
-            txtDescripcion.PlaceholderText = "Descripcion";
-            txtDescripcion.Size = new Size(252, 23);
-            txtDescripcion.TabIndex = 8;
-            // 
-            // btnPrevisual
-            // 
-            btnPrevisual.Font = new Font("Segoe UI", 12F);
-            btnPrevisual.Location = new Point(26, 232);
-            btnPrevisual.Name = "btnPrevisual";
-            btnPrevisual.Size = new Size(165, 32);
-            btnPrevisual.TabIndex = 10;
-            btnPrevisual.Text = "Previsualizar Datos";
-            btnPrevisual.UseVisualStyleBackColor = true;
-            btnPrevisual.Click += btnPrevisual_Click;
-            // 
-            // txtIdCategoria
-            // 
-            txtIdCategoria.BackColor = SystemColors.ActiveBorder;
-            txtIdCategoria.Location = new Point(28, 50);
-            txtIdCategoria.Mask = "000000";
-            txtIdCategoria.Name = "txtIdCategoria";
-            txtIdCategoria.Size = new Size(252, 23);
-            txtIdCategoria.TabIndex = 11;
-            // 
-            // error1
-            // 
-            error1.ContainerControl = this;
             // 
             // IdCat
             // 
@@ -186,6 +78,125 @@
             Descripcion.Name = "Descripcion";
             Descripcion.Width = 180;
             // 
+            // lblInfoVistaPrevia
+            // 
+            lblInfoVistaPrevia.AutoSize = true;
+            lblInfoVistaPrevia.BackColor = Color.Silver;
+            lblInfoVistaPrevia.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblInfoVistaPrevia.Location = new Point(38, 335);
+            lblInfoVistaPrevia.Name = "lblInfoVistaPrevia";
+            lblInfoVistaPrevia.Size = new Size(276, 20);
+            lblInfoVistaPrevia.TabIndex = 2;
+            lblInfoVistaPrevia.Text = "Vista Previa de Datos antes de Registrar ";
+            // 
+            // btnLimpiar
+            // 
+            btnLimpiar.Font = new Font("Segoe UI", 12F);
+            btnLimpiar.Location = new Point(36, 493);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new Size(128, 32);
+            btnLimpiar.TabIndex = 3;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.UseVisualStyleBackColor = true;
+            btnLimpiar.Click += btnLimpiar_Click;
+            // 
+            // btnGuardarCat
+            // 
+            btnGuardarCat.Enabled = false;
+            btnGuardarCat.Font = new Font("Segoe UI", 12F);
+            btnGuardarCat.Location = new Point(170, 493);
+            btnGuardarCat.Name = "btnGuardarCat";
+            btnGuardarCat.Size = new Size(165, 32);
+            btnGuardarCat.TabIndex = 4;
+            btnGuardarCat.Text = "Guardar Categoria";
+            btnGuardarCat.UseVisualStyleBackColor = true;
+            btnGuardarCat.Click += btnGuardarCat_Click;
+            // 
+            // lblIngreseID
+            // 
+            lblIngreseID.AutoSize = true;
+            lblIngreseID.BackColor = Color.Silver;
+            lblIngreseID.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIngreseID.Location = new Point(38, 71);
+            lblIngreseID.Name = "lblIngreseID";
+            lblIngreseID.Size = new Size(252, 20);
+            lblIngreseID.TabIndex = 5;
+            lblIngreseID.Text = "Ingrese el ID de categoria (6 digitos)";
+            // 
+            // lblIngreseNombre
+            // 
+            lblIngreseNombre.AutoSize = true;
+            lblIngreseNombre.BackColor = Color.Silver;
+            lblIngreseNombre.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblIngreseNombre.Location = new Point(38, 141);
+            lblIngreseNombre.Name = "lblIngreseNombre";
+            lblIngreseNombre.Size = new Size(235, 20);
+            lblIngreseNombre.TabIndex = 7;
+            lblIngreseNombre.Text = "Ingrese el nombre de la Categoria";
+            // 
+            // txtNombreCat
+            // 
+            txtNombreCat.BackColor = SystemColors.ActiveBorder;
+            txtNombreCat.Location = new Point(38, 164);
+            txtNombreCat.Name = "txtNombreCat";
+            txtNombreCat.PlaceholderText = "Nombre Categoria";
+            txtNombreCat.Size = new Size(252, 23);
+            txtNombreCat.TabIndex = 6;
+            // 
+            // lblDescripcion
+            // 
+            lblDescripcion.AutoSize = true;
+            lblDescripcion.BackColor = Color.Silver;
+            lblDescripcion.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDescripcion.Location = new Point(38, 207);
+            lblDescripcion.Name = "lblDescripcion";
+            lblDescripcion.Size = new Size(153, 20);
+            lblDescripcion.TabIndex = 9;
+            lblDescripcion.Text = "Ingrese la descripcion";
+            // 
+            // txtDescripcion
+            // 
+            txtDescripcion.BackColor = SystemColors.ActiveBorder;
+            txtDescripcion.Location = new Point(38, 230);
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.PlaceholderText = "Descripcion";
+            txtDescripcion.Size = new Size(252, 23);
+            txtDescripcion.TabIndex = 8;
+            // 
+            // btnPrevisual
+            // 
+            btnPrevisual.Font = new Font("Segoe UI", 12F);
+            btnPrevisual.Location = new Point(36, 276);
+            btnPrevisual.Name = "btnPrevisual";
+            btnPrevisual.Size = new Size(165, 32);
+            btnPrevisual.TabIndex = 10;
+            btnPrevisual.Text = "Previsualizar Datos";
+            btnPrevisual.UseVisualStyleBackColor = true;
+            btnPrevisual.Click += btnPrevisual_Click;
+            // 
+            // txtIdCategoria
+            // 
+            txtIdCategoria.BackColor = SystemColors.ActiveBorder;
+            txtIdCategoria.Location = new Point(38, 94);
+            txtIdCategoria.Mask = "000000";
+            txtIdCategoria.Name = "txtIdCategoria";
+            txtIdCategoria.Size = new Size(252, 23);
+            txtIdCategoria.TabIndex = 11;
+            // 
+            // error1
+            // 
+            error1.ContainerControl = this;
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Malgun Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(201, 9);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(262, 32);
+            lblTitulo.TabIndex = 12;
+            lblTitulo.Text = "Registro de Categoria";
+            // 
             // FrmRegistrarCategoria
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -193,6 +204,7 @@
             BackColor = Color.LightGray;
             BackgroundImage = Properties.Resources.fondoContenedor;
             ClientSize = new Size(651, 547);
+            Controls.Add(lblTitulo);
             Controls.Add(txtIdCategoria);
             Controls.Add(btnPrevisual);
             Controls.Add(lblDescripcion);
@@ -230,5 +242,6 @@
         private DataGridViewTextBoxColumn IdCat;
         private DataGridViewTextBoxColumn NombreCat;
         private DataGridViewTextBoxColumn Descripcion;
+        private Label lblTitulo;
     }
 }

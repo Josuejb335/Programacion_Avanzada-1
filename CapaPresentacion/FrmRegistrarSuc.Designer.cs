@@ -43,6 +43,7 @@
             btnActivo = new RadioButton();
             lblestado = new Label();
             btnGuardar = new Button();
+            lblTitulo = new Label();
             grupobtn.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // 
             txtId.BackColor = SystemColors.ActiveBorder;
             txtId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtId.Location = new Point(36, 67);
+            txtId.Location = new Point(31, 107);
             txtId.Mask = "000000";
             txtId.Name = "txtId";
             txtId.Size = new Size(270, 29);
@@ -61,7 +62,7 @@
             lblIngreseID.AutoSize = true;
             lblIngreseID.BackColor = Color.Silver;
             lblIngreseID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIngreseID.Location = new Point(36, 43);
+            lblIngreseID.Location = new Point(31, 83);
             lblIngreseID.Name = "lblIngreseID";
             lblIngreseID.Size = new Size(254, 21);
             lblIngreseID.TabIndex = 38;
@@ -72,7 +73,7 @@
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.Silver;
             lblNombre.Font = new Font("Segoe UI", 12F);
-            lblNombre.Location = new Point(366, 43);
+            lblNombre.Location = new Point(361, 83);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(211, 21);
             lblNombre.TabIndex = 43;
@@ -82,7 +83,7 @@
             // 
             txtNombre.BackColor = SystemColors.ActiveBorder;
             txtNombre.Font = new Font("Segoe UI", 12F);
-            txtNombre.Location = new Point(366, 69);
+            txtNombre.Location = new Point(361, 109);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Nombre de la Sucursal";
             txtNombre.Size = new Size(252, 29);
@@ -93,7 +94,7 @@
             lblUbi.AutoSize = true;
             lblUbi.BackColor = Color.Silver;
             lblUbi.Font = new Font("Segoe UI", 12F);
-            lblUbi.Location = new Point(36, 144);
+            lblUbi.Location = new Point(31, 184);
             lblUbi.Name = "lblUbi";
             lblUbi.Size = new Size(249, 21);
             lblUbi.TabIndex = 45;
@@ -103,7 +104,7 @@
             // 
             txtUbicacion.BackColor = SystemColors.ActiveBorder;
             txtUbicacion.Font = new Font("Segoe UI", 12F);
-            txtUbicacion.Location = new Point(36, 170);
+            txtUbicacion.Location = new Point(31, 210);
             txtUbicacion.Name = "txtUbicacion";
             txtUbicacion.PlaceholderText = "Ubicacion";
             txtUbicacion.Size = new Size(252, 29);
@@ -113,7 +114,7 @@
             // 
             txtTelefono.BackColor = SystemColors.ActiveBorder;
             txtTelefono.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtTelefono.Location = new Point(366, 168);
+            txtTelefono.Location = new Point(361, 208);
             txtTelefono.Mask = "0000-0000";
             txtTelefono.Name = "txtTelefono";
             txtTelefono.Size = new Size(252, 29);
@@ -124,7 +125,7 @@
             lblTlfn.AutoSize = true;
             lblTlfn.BackColor = Color.Silver;
             lblTlfn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTlfn.Location = new Point(366, 144);
+            lblTlfn.Location = new Point(361, 184);
             lblTlfn.Name = "lblTlfn";
             lblTlfn.Size = new Size(224, 21);
             lblTlfn.TabIndex = 48;
@@ -136,7 +137,7 @@
             cmbEncargado.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbEncargado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbEncargado.FormattingEnabled = true;
-            cmbEncargado.Location = new Point(34, 278);
+            cmbEncargado.Location = new Point(29, 318);
             cmbEncargado.Name = "cmbEncargado";
             cmbEncargado.Size = new Size(249, 29);
             cmbEncargado.TabIndex = 51;
@@ -146,7 +147,7 @@
             lblEncargadi.AutoSize = true;
             lblEncargadi.BackColor = Color.Silver;
             lblEncargadi.Font = new Font("Segoe UI", 12F);
-            lblEncargadi.Location = new Point(36, 254);
+            lblEncargadi.Location = new Point(31, 294);
             lblEncargadi.Name = "lblEncargadi";
             lblEncargadi.Size = new Size(247, 21);
             lblEncargadi.TabIndex = 50;
@@ -157,7 +158,7 @@
             grupobtn.BackColor = Color.Transparent;
             grupobtn.Controls.Add(btnInactivo);
             grupobtn.Controls.Add(btnActivo);
-            grupobtn.Location = new Point(366, 278);
+            grupobtn.Location = new Point(361, 318);
             grupobtn.Name = "grupobtn";
             grupobtn.Size = new Size(248, 45);
             grupobtn.TabIndex = 53;
@@ -194,7 +195,7 @@
             lblestado.AutoSize = true;
             lblestado.BackColor = Color.Silver;
             lblestado.Font = new Font("Segoe UI", 12F);
-            lblestado.Location = new Point(366, 254);
+            lblestado.Location = new Point(361, 294);
             lblestado.Name = "lblestado";
             lblestado.Size = new Size(251, 21);
             lblestado.TabIndex = 52;
@@ -211,6 +212,16 @@
             btnGuardar.UseVisualStyleBackColor = true;
             btnGuardar.Click += btnGuardar_Click;
             // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Malgun Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(233, 9);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(213, 32);
+            lblTitulo.TabIndex = 55;
+            lblTitulo.Text = "Registro Sucursal";
+            // 
             // FrmRegistrarSuc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -218,6 +229,7 @@
             BackColor = Color.LightGray;
             BackgroundImage = Properties.Resources.fondoContenedor;
             ClientSize = new Size(651, 547);
+            Controls.Add(lblTitulo);
             Controls.Add(btnGuardar);
             Controls.Add(grupobtn);
             Controls.Add(lblestado);
@@ -258,5 +270,6 @@
         private RadioButton btnActivo;
         private Label lblestado;
         private Button btnGuardar;
+        private Label lblTitulo;
     }
 }

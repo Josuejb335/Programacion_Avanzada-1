@@ -28,12 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FrmMostrarInfo";
+            lblTitulo = new Label();
+            SuspendLayout();
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Malgun Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(258, 9);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(153, 32);
+            lblTitulo.TabIndex = 1;
+            lblTitulo.Text = "Informacion";
+            // 
+            // FrmMostrarInfo
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightGray;
+            BackgroundImage = Properties.Resources.fondoContenedor;
+            ClientSize = new Size(651, 547);
+            Controls.Add(lblTitulo);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FrmMostrarInfo";
+            Text = "FrmMostrarInfo";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblTitulo;
     }
 }

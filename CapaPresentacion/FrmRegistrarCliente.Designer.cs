@@ -43,6 +43,7 @@
             btnInactivo = new RadioButton();
             btnActivo = new RadioButton();
             lblestado = new Label();
+            lblTitulo = new Label();
             grupobtn.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // 
             txtIden.BackColor = SystemColors.ActiveBorder;
             txtIden.Font = new Font("Segoe UI", 12F);
-            txtIden.Location = new Point(367, 60);
+            txtIden.Location = new Point(367, 109);
             txtIden.Name = "txtIden";
             txtIden.PlaceholderText = "Identificacion";
             txtIden.Size = new Size(252, 29);
@@ -60,7 +61,7 @@
             // 
             txtId.BackColor = SystemColors.ActiveBorder;
             txtId.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtId.Location = new Point(40, 60);
+            txtId.Location = new Point(40, 109);
             txtId.Mask = "000000";
             txtId.Name = "txtId";
             txtId.Size = new Size(270, 29);
@@ -71,7 +72,7 @@
             lblIngreseID.AutoSize = true;
             lblIngreseID.BackColor = Color.Silver;
             lblIngreseID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIngreseID.Location = new Point(40, 36);
+            lblIngreseID.Location = new Point(40, 85);
             lblIngreseID.Name = "lblIngreseID";
             lblIngreseID.Size = new Size(253, 21);
             lblIngreseID.TabIndex = 36;
@@ -82,7 +83,7 @@
             lblNombre.AutoSize = true;
             lblNombre.BackColor = Color.Silver;
             lblNombre.Font = new Font("Segoe UI", 12F);
-            lblNombre.Location = new Point(40, 135);
+            lblNombre.Location = new Point(40, 184);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new Size(211, 21);
             lblNombre.TabIndex = 41;
@@ -92,7 +93,7 @@
             // 
             txtNombre.BackColor = SystemColors.ActiveBorder;
             txtNombre.Font = new Font("Segoe UI", 12F);
-            txtNombre.Location = new Point(40, 161);
+            txtNombre.Location = new Point(40, 210);
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Nombre Completo";
             txtNombre.Size = new Size(252, 29);
@@ -103,7 +104,7 @@
             lblNacimiento.AutoSize = true;
             lblNacimiento.BackColor = Color.Silver;
             lblNacimiento.Font = new Font("Segoe UI", 12F);
-            lblNacimiento.Location = new Point(367, 135);
+            lblNacimiento.Location = new Point(367, 184);
             lblNacimiento.Name = "lblNacimiento";
             lblNacimiento.RightToLeft = RightToLeft.Yes;
             lblNacimiento.Size = new Size(228, 21);
@@ -113,7 +114,7 @@
             // dateNacimiento
             // 
             dateNacimiento.CalendarMonthBackground = SystemColors.ActiveBorder;
-            dateNacimiento.Location = new Point(367, 161);
+            dateNacimiento.Location = new Point(367, 210);
             dateNacimiento.Name = "dateNacimiento";
             dateNacimiento.Size = new Size(252, 23);
             dateNacimiento.TabIndex = 43;
@@ -121,7 +122,7 @@
             // dateRegistro
             // 
             dateRegistro.CalendarMonthBackground = SystemColors.ActiveBorder;
-            dateRegistro.Location = new Point(367, 264);
+            dateRegistro.Location = new Point(367, 313);
             dateRegistro.Name = "dateRegistro";
             dateRegistro.Size = new Size(252, 23);
             dateRegistro.TabIndex = 45;
@@ -131,7 +132,7 @@
             lblRegistro.AutoSize = true;
             lblRegistro.BackColor = Color.Silver;
             lblRegistro.Font = new Font("Segoe UI", 12F);
-            lblRegistro.Location = new Point(367, 240);
+            lblRegistro.Location = new Point(367, 289);
             lblRegistro.Name = "lblRegistro";
             lblRegistro.Size = new Size(206, 21);
             lblRegistro.TabIndex = 44;
@@ -153,7 +154,7 @@
             lblIdenti.AutoSize = true;
             lblIdenti.BackColor = Color.Silver;
             lblIdenti.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblIdenti.Location = new Point(367, 36);
+            lblIdenti.Location = new Point(367, 85);
             lblIdenti.Name = "lblIdenti";
             lblIdenti.Size = new Size(177, 21);
             lblIdenti.TabIndex = 49;
@@ -164,7 +165,7 @@
             grupobtn.BackColor = Color.Transparent;
             grupobtn.Controls.Add(btnInactivo);
             grupobtn.Controls.Add(btnActivo);
-            grupobtn.Location = new Point(42, 264);
+            grupobtn.Location = new Point(42, 313);
             grupobtn.Name = "grupobtn";
             grupobtn.Size = new Size(248, 45);
             grupobtn.TabIndex = 55;
@@ -201,11 +202,21 @@
             lblestado.AutoSize = true;
             lblestado.BackColor = Color.Silver;
             lblestado.Font = new Font("Segoe UI", 12F);
-            lblestado.Location = new Point(42, 240);
+            lblestado.Location = new Point(42, 289);
             lblestado.Name = "lblestado";
             lblestado.Size = new Size(245, 21);
             lblestado.TabIndex = 54;
             lblestado.Text = "Seleccione si el Cliente esta Activo";
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.AutoSize = true;
+            lblTitulo.Font = new Font("Malgun Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.Location = new Point(225, 9);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(196, 32);
+            lblTitulo.TabIndex = 56;
+            lblTitulo.Text = "Registro Cliente";
             // 
             // FrmRegistrarCliente
             // 
@@ -214,6 +225,7 @@
             BackColor = Color.LightGray;
             BackgroundImage = Properties.Resources.fondoContenedor;
             ClientSize = new Size(651, 547);
+            Controls.Add(lblTitulo);
             Controls.Add(grupobtn);
             Controls.Add(lblestado);
             Controls.Add(lblIdenti);
@@ -256,5 +268,6 @@
         private RadioButton btnInactivo;
         private RadioButton btnActivo;
         private Label lblestado;
+        private Label lblTitulo;
     }
 }

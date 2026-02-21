@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaAccesoDatos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace CapaPresentacion
         public FrmAsociar()
         {
             InitializeComponent();
+        }
+
+        private void FrmAsociar_Load(object sender, EventArgs e)
+        {
+            foreach (var suc in Almacenamiento.ArraySucursales)
+            {
+
+            }
         }
     }
 }

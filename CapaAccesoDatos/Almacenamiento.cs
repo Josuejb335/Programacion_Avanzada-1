@@ -15,5 +15,6 @@ namespace CapaAccesoDatos
         public static Vendedor[] ArrayVendedores = new Vendedor[20];
         public static Sucursal[] ArraySucursales = new Sucursal[5];
         public static Cliente[] ArrayClientes = new Cliente[5];
+        public static VehiculoxSucursal[] ArrayVehiculosxSucursal = new VehiculoxSucursal[100];
     }
 }
