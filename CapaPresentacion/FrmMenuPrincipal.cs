@@ -154,5 +154,10 @@ namespace CapaPresentacion
                 AbrirFormularioEnPanel(new FrmRegistrarSuc());
             }
         }
+
+        private void btnRegistrarCliente_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel(new FrmRegistrarCliente());
+        }
     }
 }

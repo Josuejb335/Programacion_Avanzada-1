@@ -60,7 +60,7 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    MessageBox.Show(resultado, "Vehículo guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(resultado, "Vendedor guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     //limpiar campos despues de guardar
                     txtId.Clear();
                     txtIden.Clear();
@@ -73,10 +73,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Error al guardar el vendedor: " + ex.Message);
             }
-
-           
-
-
         }
     }
 }

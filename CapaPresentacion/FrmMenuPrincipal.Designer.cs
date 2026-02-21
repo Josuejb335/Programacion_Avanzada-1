@@ -154,6 +154,7 @@
             btnRegistrarCliente.TabIndex = 6;
             btnRegistrarCliente.Text = "Registrar Cliente";
             btnRegistrarCliente.UseVisualStyleBackColor = false;
+            btnRegistrarCliente.Click += btnRegistrarCliente_Click;
             // 
             // btnConsultarInfo
             // 

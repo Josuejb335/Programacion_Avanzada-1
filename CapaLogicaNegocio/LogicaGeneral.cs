@@ -18,10 +18,11 @@ namespace CapaLogicaNegocio
         public static int contadorArrayVeh = 0;
         public static int contadorArrayVend = 0;
         public static int contadorArraySuc = 0;
+        public static int contadorArrayClie = 0;
 
 
         //metodo para agregar una nueva categoria al arreglo de categorias en la clase Almacenamiento
-        public string AgregarElemento(CategoriaVehiculo cat = null, Vehiculo veh = null, Vendedor vend = null, Sucursal suc = null)
+        public string AgregarElemento(CategoriaVehiculo cat = null, Vehiculo veh = null, Vendedor vend = null, Sucursal suc = null, Cliente clie = null)
         {
             try
             {   
@@ -92,7 +93,7 @@ namespace CapaLogicaNegocio
                 {
                     if (ExisteSucursal(suc.IdSucursal))
                     {
-                        return "ERROR La sucursal con el ID " + vend.IdVendedor + " ya existe. No se puede agregar.";
+                        return "ERROR La sucursal con el ID " + suc.IdSucursal + " ya existe. No se puede agregar.";
                     }
 
                     //se busca el primer espacio vacio del arreglo para agregar la nueva sucursal
@@ -108,10 +109,25 @@ namespace CapaLogicaNegocio
                     return "No se pudo agregar la Sucursal, el almacenamiento esta lleno";
                 }
                 //guardar cliente
+                if (clie != null)
+                {
+                    if (ExisteCliente(clie.IdCliente))
+                    {
+                        return "ERROR el Cliente con el ID " + clie.IdCliente + " ya existe. No se puede agregar.";
+                    }
 
-
-
-
+                    //se busca el primer espacio vacio del arreglo para agregar la nueva sucursal
+                    for (int i = 0; i < Almacenamiento.ArrayClientes.Length; i++)
+                    {
+                        if (Almacenamiento.ArrayClientes[i] == null)
+                        {
+                            Almacenamiento.ArrayClientes[i] = clie;
+                            contadorArrayClie++;
+                            return "Cliente agregado con exito";
+                        }
+                    }
+                    return "No se pudo agregar el Cliente, el almacenamiento esta lleno";
+                }
                 return "No se proporcionó un elemento válido para agregar.";
             }
             catch (Exception ex)
@@ -193,6 +209,24 @@ namespace CapaLogicaNegocio
                 }
             }
             return false; //no se encontró la sucursal
+        }
+
+        //metodo para verificar si un ID de cliente existe en el arreglo de clientes
+        public bool ExisteCliente(int idBusqueda)
+        {
+            for (int i = 0; i < Almacenamiento.ArrayClientes.Length; i++)
+            {
+                // saltar espacios vacíos para evitar errores de referencia nula
+                if (Almacenamiento.ArrayClientes[i] != null)
+                {
+                    // se compara 
+                    if (Almacenamiento.ArrayClientes[i].IdCliente == idBusqueda)
+                    {
+                        return true; // se encontró el cliente
+                    }
+                }
+            }
+            return false; //no se encontró el cliente
         }
 
 

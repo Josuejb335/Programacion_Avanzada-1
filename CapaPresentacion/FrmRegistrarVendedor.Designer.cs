@@ -200,7 +200,7 @@
             Controls.Add(lblIngreseID);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmRegistrarVendedor";
-            Text = "FrmRegistrarVendedor";
+            Text = " ";
             ResumeLayout(false);
             PerformLayout();
         }
