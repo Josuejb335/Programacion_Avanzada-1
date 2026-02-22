@@ -5,7 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+ * UNED I Cuatrimestre 2026
+ * Proyecto I, Gestion De AutoMarket. 
+ * Estudiante: Josue Jimenez Barrantes
+ * Fecha entrega : 22 Febrero 2026
+ */
 namespace CapaLogicaNegocio
 {
     public class LogicaGeneral

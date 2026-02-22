@@ -26,16 +26,6 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void dataPreviewRegistro_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void FrmRegistrarCategoria_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             //limpiar los campos de texto

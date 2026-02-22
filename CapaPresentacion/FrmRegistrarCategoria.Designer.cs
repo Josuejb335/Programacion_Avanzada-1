@@ -58,7 +58,6 @@
             dataPreviewRegistro.Name = "dataPreviewRegistro";
             dataPreviewRegistro.Size = new Size(583, 96);
             dataPreviewRegistro.TabIndex = 1;
-            dataPreviewRegistro.CellContentClick += dataPreviewRegistro_CellContentClick;
             // 
             // IdCat
             // 
@@ -219,7 +218,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmRegistrarCategoria";
             Text = "FrmRegistrarCategoria";
-            Load += FrmRegistrarCategoria_Load;
             ((System.ComponentModel.ISupportInitialize)dataPreviewRegistro).EndInit();
             ((System.ComponentModel.ISupportInitialize)error1).EndInit();
             ResumeLayout(false);

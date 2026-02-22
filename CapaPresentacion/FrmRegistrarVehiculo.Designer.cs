@@ -101,7 +101,6 @@
             lblModelo.Size = new Size(222, 21);
             lblModelo.TabIndex = 17;
             lblModelo.Text = "Ingrese el Modelo del Vehiculo";
-            lblModelo.Click += lblModelo_Click;
             // 
             // txtModelo
             // 

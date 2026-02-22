@@ -107,7 +107,6 @@
             lblNacimiento.Size = new Size(228, 21);
             lblNacimiento.TabIndex = 42;
             lblNacimiento.Text = "Ingrese la Fecha De Nacimiento";
-            lblNacimiento.Click += label1_Click_1;
             // 
             // dateNacimiento
             // 

@@ -10,6 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * UNED I Cuatrimestre 2026
+ * Proyecto I, Gestion De AutoMarket. 
+ * Estudiante: Josue Jimenez Barrantes
+ * Fecha desarrollo : semana del 16 al 22 de Febrero del 2026
+ */
+
 namespace CapaPresentacion
 {
     public partial class FrmContInfoSuc : Form
@@ -30,7 +37,7 @@ namespace CapaPresentacion
 
                 if (sucActual != null && sucActual.vendedorEncargado != null)
                 {
-                    // asignarle el valor de la propiedad NombreCategoria 
+                    // asignarle el valor de la propiedad  
                     e.Value = sucActual.vendedorEncargado.Identificacion;
                 }
             }
@@ -44,7 +51,7 @@ namespace CapaPresentacion
 
                 if (sucActual != null && sucActual.vendedorEncargado != null)
                 {
-                    // asignarle el valor de la propiedad NombreCategoria 
+                    // asignarle el valor de la propiedad  
                     e.Value = sucActual.vendedorEncargado.Nombre;
                 }
             }

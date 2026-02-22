@@ -18,7 +18,6 @@ namespace CapaPresentacion
     {
         //objeto de logica de negocio para acceder al metodo de agregar categoria
         LogicaGeneral gestorLogica = new LogicaGeneral();
-        //variable por si hubo error en el metodo de guardare;
 
         public FrmRegistrarVehiculo()
         {
@@ -114,16 +113,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
-        }
-
-        private void imgAnio_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblModelo_Click(object sender, EventArgs e)
-        {
 
         }
     }

@@ -20,20 +20,11 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
+                //validar que los campos obligatorios no estén vacíos
                 if (string.IsNullOrEmpty(txtIden.Text) || string.IsNullOrEmpty(txtNombre.Text) || !txtTelefono.MaskFull || !txtId.MaskFull)
                 {
                     MessageBox.Show("Por favor, complete todos los campos.",
@@ -50,6 +41,7 @@ namespace CapaPresentacion
                 DateTime ingreso = dateIngreso.Value;
                 string telefono = txtTelefono.Text;
 
+                //crear el objeto Vendedor
                 Vendedor vend = new Vendedor(id, identificacion, nombre, nacimiento, ingreso, telefono);
 
                 //guardar el vendedor usando la logica de negocio

@@ -21,11 +21,6 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void FrmRegistrarCliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             try

@@ -1,6 +1,13 @@
 using CapaAccesoDatos;
 using CapaLogicaNegocio;
 
+/*
+ * UNED I Cuatrimestre 2026
+ * Proyecto I, Gestion De AutoMarket. 
+ * Estudiante: Josue Jimenez Barrantes
+ * Fecha desarrollo : semana del 16 al 22 de Febrero del 2026
+ */
+
 namespace CapaPresentacion
 {
     public partial class FrmMenuPrincipal : Form
@@ -15,10 +22,6 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
-        {
-
-        }
         //boton de minimizar ventana personalizado
         private void btnMinimizar_Click(object sender, EventArgs e)
         {

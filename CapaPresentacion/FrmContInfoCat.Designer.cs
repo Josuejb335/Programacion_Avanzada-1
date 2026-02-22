@@ -43,7 +43,6 @@
             dataInfo.Name = "dataInfo";
             dataInfo.Size = new Size(611, 400);
             dataInfo.TabIndex = 2;
-            dataInfo.CellContentClick += dataInfo_CellContentClick;
             // 
             // IdCategoria
             // 

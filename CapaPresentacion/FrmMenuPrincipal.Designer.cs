@@ -275,7 +275,6 @@
             Name = "FrmMenuPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MenuPrincipal";
-            Load += FrmMenuPrincipal_Load;
             topPanel.ResumeLayout(false);
             topPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnMinimizar).EndInit();
