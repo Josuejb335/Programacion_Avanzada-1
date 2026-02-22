@@ -36,6 +36,7 @@
             pictureBox1 = new PictureBox();
             txtNum = new NumericUpDown();
             lblNum = new Label();
+            btnGuardar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)txtNum).BeginInit();
             SuspendLayout();
@@ -119,6 +120,17 @@
             lblNum.TabIndex = 10;
             lblNum.Text = "Numero de asocies";
             // 
+            // btnGuardar
+            // 
+            btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGuardar.Location = new Point(42, 488);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(203, 47);
+            btnGuardar.TabIndex = 31;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
             // FrmAsociar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -126,6 +138,7 @@
             BackColor = Color.LightGray;
             BackgroundImage = Properties.Resources.fondoContenedor;
             ClientSize = new Size(651, 547);
+            Controls.Add(btnGuardar);
             Controls.Add(lblNum);
             Controls.Add(txtNum);
             Controls.Add(pictureBox1);
@@ -154,5 +167,6 @@
         private PictureBox pictureBox1;
         private NumericUpDown txtNum;
         private Label lblNum;
+        private Button btnGuardar;
     }
 }

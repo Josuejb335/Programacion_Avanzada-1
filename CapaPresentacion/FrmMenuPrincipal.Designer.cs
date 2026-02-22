@@ -68,11 +68,11 @@
             // txtTitulo
             // 
             txtTitulo.AutoSize = true;
-            txtTitulo.Font = new Font("Sitka Banner", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTitulo.Font = new Font("Malgun Gothic", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTitulo.ForeColor = SystemColors.ButtonFace;
             txtTitulo.Location = new Point(3, 9);
             txtTitulo.Name = "txtTitulo";
-            txtTitulo.Size = new Size(325, 53);
+            txtTitulo.Size = new Size(381, 50);
             txtTitulo.TabIndex = 3;
             txtTitulo.Text = "Gestión AutoMarket";
             // 
@@ -138,6 +138,7 @@
             btnAsociar.TabIndex = 7;
             btnAsociar.Text = "Asociar Vehiculo a Sucursal";
             btnAsociar.UseVisualStyleBackColor = false;
+            btnAsociar.Click += btnAsociar_Click;
             // 
             // btnRegistrarCliente
             // 
