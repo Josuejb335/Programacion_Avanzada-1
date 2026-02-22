@@ -93,6 +93,36 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FondoContInfoGen {
+            get {
+                object obj = ResourceManager.GetObject("FondoContInfoGen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondoPanelAsocie {
+            get {
+                object obj = ResourceManager.GetObject("fondoPanelAsocie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondoPanelCat {
+            get {
+                object obj = ResourceManager.GetObject("fondoPanelCat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondoPanelContBtnsMP {
             get {
                 object obj = ResourceManager.GetObject("fondoPanelContBtnsMP", resourceCulture);
@@ -103,9 +133,9 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconAnio {
+        internal static System.Drawing.Bitmap fondoPanelInfo {
             get {
-                object obj = ResourceManager.GetObject("iconAnio", resourceCulture);
+                object obj = ResourceManager.GetObject("fondoPanelInfo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +143,9 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconCategoria {
+        internal static System.Drawing.Bitmap fondoPanelRCliente {
             get {
-                object obj = ResourceManager.GetObject("iconCategoria", resourceCulture);
+                object obj = ResourceManager.GetObject("fondoPanelRCliente", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +153,9 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconLink2 {
+        internal static System.Drawing.Bitmap fondoPanelRSuc {
             get {
-                object obj = ResourceManager.GetObject("iconLink2", resourceCulture);
+                object obj = ResourceManager.GetObject("fondoPanelRSuc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +163,9 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconMarca {
+        internal static System.Drawing.Bitmap fondoPanelRVehi {
             get {
-                object obj = ResourceManager.GetObject("iconMarca", resourceCulture);
+                object obj = ResourceManager.GetObject("fondoPanelRVehi", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +173,19 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconMinimizar {
+        internal static System.Drawing.Bitmap fondoPanelRVend {
             get {
-                object obj = ResourceManager.GetObject("iconMinimizar", resourceCulture);
+                object obj = ResourceManager.GetObject("fondoPanelRVend", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconLink {
+            get {
+                object obj = ResourceManager.GetObject("iconLink", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,49 +203,9 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap iconModelo {
-            get {
-                object obj = ResourceManager.GetObject("iconModelo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconNew {
-            get {
-                object obj = ResourceManager.GetObject("iconNew", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap iconoCerrarV {
             get {
                 object obj = ResourceManager.GetObject("iconoCerrarV", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconPrice {
-            get {
-                object obj = ResourceManager.GetObject("iconPrice", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconVehicule {
-            get {
-                object obj = ResourceManager.GetObject("iconVehicule", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

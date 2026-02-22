@@ -223,7 +223,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            BackgroundImage = Properties.Resources.fondoContenedor;
+            BackgroundImage = Properties.Resources.fondoPanelRCliente;
             ClientSize = new Size(651, 547);
             Controls.Add(lblTitulo);
             Controls.Add(grupobtn);

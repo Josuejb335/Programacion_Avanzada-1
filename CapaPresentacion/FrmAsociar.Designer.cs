@@ -94,8 +94,8 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = Properties.Resources.iconLink2;
-            pictureBox1.Location = new Point(266, 123);
+            pictureBox1.Image = Properties.Resources.iconLink;
+            pictureBox1.Location = new Point(267, 123);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(100, 50);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -122,13 +122,16 @@
             // 
             // btnGuardar
             // 
+            btnGuardar.BackColor = Color.White;
+            btnGuardar.FlatAppearance.BorderColor = Color.Black;
+            btnGuardar.FlatAppearance.MouseOverBackColor = Color.LightGray;
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnGuardar.Location = new Point(42, 488);
+            btnGuardar.Location = new Point(42, 477);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(203, 47);
+            btnGuardar.Size = new Size(178, 43);
             btnGuardar.TabIndex = 31;
             btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
             // 
             // FrmAsociar
@@ -136,7 +139,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            BackgroundImage = Properties.Resources.fondoContenedor;
+            BackgroundImage = Properties.Resources.fondoPanelAsocie;
             ClientSize = new Size(651, 547);
             Controls.Add(btnGuardar);
             Controls.Add(lblNum);

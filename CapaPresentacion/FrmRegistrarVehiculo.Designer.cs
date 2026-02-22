@@ -96,7 +96,7 @@
             lblModelo.AutoSize = true;
             lblModelo.BackColor = Color.Silver;
             lblModelo.Font = new Font("Segoe UI", 12F);
-            lblModelo.Location = new Point(36, 169);
+            lblModelo.Location = new Point(36, 163);
             lblModelo.Name = "lblModelo";
             lblModelo.Size = new Size(222, 21);
             lblModelo.TabIndex = 17;
@@ -107,7 +107,7 @@
             // 
             txtModelo.BackColor = SystemColors.ActiveBorder;
             txtModelo.Font = new Font("Segoe UI", 12F);
-            txtModelo.Location = new Point(36, 193);
+            txtModelo.Location = new Point(36, 187);
             txtModelo.Name = "txtModelo";
             txtModelo.PlaceholderText = "Modelo del Vehiculo";
             txtModelo.Size = new Size(270, 29);
@@ -118,7 +118,7 @@
             lblAnio.AutoSize = true;
             lblAnio.BackColor = Color.Silver;
             lblAnio.Font = new Font("Segoe UI", 12F);
-            lblAnio.Location = new Point(360, 169);
+            lblAnio.Location = new Point(360, 163);
             lblAnio.Name = "lblAnio";
             lblAnio.Size = new Size(195, 21);
             lblAnio.TabIndex = 19;
@@ -129,7 +129,7 @@
             lblPrecio.AutoSize = true;
             lblPrecio.BackColor = Color.Silver;
             lblPrecio.Font = new Font("Segoe UI", 12F);
-            lblPrecio.Location = new Point(36, 279);
+            lblPrecio.Location = new Point(36, 260);
             lblPrecio.Name = "lblPrecio";
             lblPrecio.Size = new Size(212, 21);
             lblPrecio.TabIndex = 21;
@@ -140,7 +140,7 @@
             lblCat.AutoSize = true;
             lblCat.BackColor = Color.Silver;
             lblCat.Font = new Font("Segoe UI", 12F);
-            lblCat.Location = new Point(360, 279);
+            lblCat.Location = new Point(360, 260);
             lblCat.Name = "lblCat";
             lblCat.Size = new Size(258, 21);
             lblCat.TabIndex = 23;
@@ -150,7 +150,7 @@
             // 
             txtAnio.BackColor = SystemColors.ActiveBorder;
             txtAnio.Font = new Font("Segoe UI", 12F);
-            txtAnio.Location = new Point(360, 193);
+            txtAnio.Location = new Point(360, 187);
             txtAnio.Mask = "0000";
             txtAnio.Name = "txtAnio";
             txtAnio.Size = new Size(252, 29);
@@ -162,7 +162,7 @@
             lblEstado.AutoSize = true;
             lblEstado.BackColor = Color.Silver;
             lblEstado.Font = new Font("Segoe UI", 12F);
-            lblEstado.Location = new Point(36, 379);
+            lblEstado.Location = new Point(36, 353);
             lblEstado.Name = "lblEstado";
             lblEstado.Size = new Size(215, 21);
             lblEstado.TabIndex = 26;
@@ -174,7 +174,7 @@
             cmbCategorias.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategorias.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbCategorias.FormattingEnabled = true;
-            cmbCategorias.Location = new Point(360, 303);
+            cmbCategorias.Location = new Point(360, 284);
             cmbCategorias.Name = "cmbCategorias";
             cmbCategorias.Size = new Size(252, 29);
             cmbCategorias.TabIndex = 27;
@@ -184,7 +184,7 @@
             groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(btnUsado);
             groupBox1.Controls.Add(btnNuevo);
-            groupBox1.Location = new Point(36, 417);
+            groupBox1.Location = new Point(37, 377);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(221, 41);
             groupBox1.TabIndex = 28;
@@ -220,7 +220,7 @@
             // 
             txtPrecio.BackColor = SystemColors.ActiveBorder;
             txtPrecio.Font = new Font("Segoe UI", 12F);
-            txtPrecio.Location = new Point(36, 303);
+            txtPrecio.Location = new Point(36, 284);
             txtPrecio.Mask = "0000000000000000000000000000000";
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(270, 29);
@@ -231,7 +231,7 @@
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGuardar.Location = new Point(36, 479);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(203, 47);
+            btnGuardar.Size = new Size(193, 47);
             btnGuardar.TabIndex = 30;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
@@ -252,7 +252,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            BackgroundImage = Properties.Resources.fondoContenedor;
+            BackgroundImage = Properties.Resources.fondoPanelRVehi;
             ClientSize = new Size(651, 547);
             Controls.Add(lblTitulo);
             Controls.Add(btnGuardar);

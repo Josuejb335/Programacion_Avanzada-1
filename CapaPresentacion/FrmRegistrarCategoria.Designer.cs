@@ -56,7 +56,7 @@
             dataPreviewRegistro.Columns.AddRange(new DataGridViewColumn[] { IdCat, NombreCat, Descripcion });
             dataPreviewRegistro.Location = new Point(36, 368);
             dataPreviewRegistro.Name = "dataPreviewRegistro";
-            dataPreviewRegistro.Size = new Size(583, 119);
+            dataPreviewRegistro.Size = new Size(583, 96);
             dataPreviewRegistro.TabIndex = 1;
             dataPreviewRegistro.CellContentClick += dataPreviewRegistro_CellContentClick;
             // 
@@ -92,9 +92,9 @@
             // btnLimpiar
             // 
             btnLimpiar.Font = new Font("Segoe UI", 12F);
-            btnLimpiar.Location = new Point(36, 493);
+            btnLimpiar.Location = new Point(29, 494);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new Size(128, 32);
+            btnLimpiar.Size = new Size(128, 41);
             btnLimpiar.TabIndex = 3;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.UseVisualStyleBackColor = true;
@@ -104,9 +104,9 @@
             // 
             btnGuardarCat.Enabled = false;
             btnGuardarCat.Font = new Font("Segoe UI", 12F);
-            btnGuardarCat.Location = new Point(170, 493);
+            btnGuardarCat.Location = new Point(163, 494);
             btnGuardarCat.Name = "btnGuardarCat";
-            btnGuardarCat.Size = new Size(165, 32);
+            btnGuardarCat.Size = new Size(165, 41);
             btnGuardarCat.TabIndex = 4;
             btnGuardarCat.Text = "Guardar Categoria";
             btnGuardarCat.UseVisualStyleBackColor = true;
@@ -202,7 +202,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            BackgroundImage = Properties.Resources.fondoContenedor;
+            BackgroundImage = Properties.Resources.fondoPanelCat;
             ClientSize = new Size(651, 547);
             Controls.Add(lblTitulo);
             Controls.Add(txtIdCategoria);

@@ -173,6 +173,7 @@
             btnConsultarInfo.TabIndex = 6;
             btnConsultarInfo.Text = "Consultar Informacion";
             btnConsultarInfo.UseVisualStyleBackColor = false;
+            btnConsultarInfo.Click += btnConsultarInfo_Click;
             // 
             // btnRegistrarSucursal
             // 

@@ -5,8 +5,7 @@ namespace CapaPresentacion
 {
     public partial class FrmMenuPrincipal : Form
     {
-        //variable para arrastrar la ventana personalizada
-
+        //variables usadas para arrastrar la ventana personalizada
         private bool arrastrando = false;
         private Point puntoCursorArrastre;
         private Point puntoFormularioArrastre;
@@ -14,8 +13,6 @@ namespace CapaPresentacion
         public FrmMenuPrincipal()
         {
             InitializeComponent();
-
-
         }
 
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
@@ -113,12 +110,12 @@ namespace CapaPresentacion
             fh.Show();
         }
 
-        //abrir submenus con la funcion AbrirFormularioEnPanel
+        //boton para registrarCategoria, llama al metodo que abre el formulario dentro del panel contenedor
         private void btnRegistrarCat_Click(object sender, EventArgs e)
         {
             AbrirFormularioEnPanel(new FrmRegistrarCategoria());
         }
-
+        //boton para registrarVehiculo, llama al metodo que abre el formulario dentro del panel contenedor, y verifica que haya al menos un vendedor para asignar como encargado de la sucursal
         private void btnRegistrarVehiculo_Click(object sender, EventArgs e)
         {
             //revisa si hay al menos una categoría
@@ -133,13 +130,13 @@ namespace CapaPresentacion
                 AbrirFormularioEnPanel(new FrmRegistrarVehiculo());
             }
         }
-
+        //boton para registrarVendedor, llama al metodo que abre el formulario dentro del panel contenedor
         private void btnRegistrarVendedor_Click(object sender, EventArgs e)
         {
             AbrirFormularioEnPanel(new FrmRegistrarVendedor());
 
         }
-
+        //boton para registrar, llama al metodo que abre el formulario dentro del panel contenedor, y verifica que haya al menos un vendedor para asignar como encargado de la sucursal
         private void btnRegistrarSucursal_Click(object sender, EventArgs e)
         {
             //revisa si hay al menos un vendedor para asignar como encargado
@@ -155,14 +152,20 @@ namespace CapaPresentacion
             }
         }
 
+        //boton para registrarCliente, llama al metodo que abre el formulario dentro del panel contenedor
         private void btnRegistrarCliente_Click(object sender, EventArgs e)
         {
             AbrirFormularioEnPanel(new FrmRegistrarCliente());
         }
-
+        //boton para asociar, llama al metodo que abre el formulario dentro del panel contenedor
         private void btnAsociar_Click(object sender, EventArgs e)
         {
             AbrirFormularioEnPanel(new FrmAsociar());
+        }
+        //boton para consultar, llama al metodo que abre el formulario dentro del panel contenedor
+        private void btnConsultarInfo_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioEnPanel(new FrmMostrarInfo());
         }
     }
 }

@@ -20,6 +20,7 @@ namespace CapaLogicaNegocio
         public static int contadorArraySuc = 0;
         public static int contadorArrayClie = 0;
 
+      
 
         //metodo para agregar una nueva categoria al arreglo de categorias en la clase Almacenamiento
         public string AgregarElemento(CategoriaVehiculo cat = null, Vehiculo veh = null, Vendedor vend = null, Sucursal suc = null, Cliente clie = null)

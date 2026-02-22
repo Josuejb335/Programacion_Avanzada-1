@@ -160,7 +160,7 @@
             // btnGuardar
             // 
             btnGuardar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnGuardar.Location = new Point(40, 476);
+            btnGuardar.Location = new Point(27, 475);
             btnGuardar.Name = "btnGuardar";
             btnGuardar.Size = new Size(203, 47);
             btnGuardar.TabIndex = 48;
@@ -194,7 +194,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            BackgroundImage = Properties.Resources.fondoContenedor;
+            BackgroundImage = Properties.Resources.fondoPanelRVend;
             ClientSize = new Size(651, 547);
             Controls.Add(lblTitulo);
             Controls.Add(lblIdenti);

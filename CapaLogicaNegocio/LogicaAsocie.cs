@@ -60,6 +60,7 @@ namespace CapaLogicaNegocio
                 {
                     if (Almacenamiento.ArrayVehiculosxSucursal[i] == null)
                     {
+                        //se crea el objeto y se guarda al arreglo inmediatamente
                         Almacenamiento.ArrayVehiculosxSucursal[i] = new VehiculoxSucursal { vehiculoAsociado = veh, sucursalAsociada = suc, cantidad = num};
                         return "Asociación agregada con éxito";
                     }
