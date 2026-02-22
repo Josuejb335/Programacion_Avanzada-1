@@ -1,10 +1,12 @@
 ﻿using CapaAccesoDatos;
 using CapaEntidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+/*
+ * UNED I Cuatrimestre 2026
+ * Proyecto I, Gestion De AutoMarket. 
+ * Estudiante: Josue Jimenez Barrantes
+ * Fecha desarrollo : semana del 16 al 22 de Febrero del 2026
+ */
 
 namespace CapaLogicaNegocio
 {
@@ -38,7 +40,7 @@ namespace CapaLogicaNegocio
             return Almacenamiento.ArraySucursalesActivas;
         }
 
-        //metoodo para asociar un vehiculo a una sucursal (lo agrega al array para eso)
+        //metoodo para asociar un vehiculo a una sucursal (lo agrega al arreglo de asociaciones)
         public string AgregarAsociacion(Vehiculo veh, Sucursal suc, int num)
         {
             try
@@ -87,9 +89,5 @@ namespace CapaLogicaNegocio
             }
             return false;
         }
-
-
-
-
     }
 }

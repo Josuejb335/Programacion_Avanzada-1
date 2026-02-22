@@ -1,23 +1,17 @@
 ﻿using CapaAccesoDatos;
 using CapaEntidades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 /*
  * UNED I Cuatrimestre 2026
  * Proyecto I, Gestion De AutoMarket. 
  * Estudiante: Josue Jimenez Barrantes
- * Fecha entrega : 22 Febrero 2026
+ * Fecha desarrollo : semana del 16 al 22 de Febrero del 2026
  */
+
 namespace CapaLogicaNegocio
 {
     public class LogicaGeneral
     {
-        //agregar elementos a los array
-
-
         //contador para llevar el control de la cantidad de categorias agregadas al arreglo de categorias en la clase Almacenamiento
         public static int contadorArrayCat = 0;
         public static int contadorArrayVeh = 0;
@@ -27,7 +21,7 @@ namespace CapaLogicaNegocio
 
       
 
-        //metodo para agregar una nueva categoria al arreglo de categorias en la clase Almacenamiento
+        //metodo para agregar un elemento a el array respectivo que se le pase como atributo
         public string AgregarElemento(CategoriaVehiculo cat = null, Vehiculo veh = null, Vendedor vend = null, Sucursal suc = null, Cliente clie = null)
         {
             try
@@ -234,8 +228,6 @@ namespace CapaLogicaNegocio
             }
             return false; //no se encontró el cliente
         }
-
-
     }
 }
     

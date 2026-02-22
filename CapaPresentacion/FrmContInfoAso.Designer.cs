@@ -60,6 +60,7 @@
             // 
             // Cantidad
             // 
+            Cantidad.DataPropertyName = "Cantidad";
             Cantidad.HeaderText = "Cantidad";
             Cantidad.Name = "Cantidad";
             Cantidad.Width = 160;
